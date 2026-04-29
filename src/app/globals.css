@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --gris1: #96938c;
+  --negro1: #000000;
+  --white1: #fcf7eb;
+  --fondoT: hsla(274, 100%, 1%, 0.827);
+
+}
+
+.RedG{
+  background: linear-gradient(180deg,#fd0054, #b90000,#2b0500) !important;
+}
+.BlueG{
+   background: linear-gradient(180deg,#0076fd, #2200b9,#230031) !important;
+}
+
+.Bigger:hover{
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+}
+
+/*Hover ==========================================*/
+.BoxShine:hover{
+  box-shadow: 0 0 10px var(--white1), 0 0 20px var(--white1);
+  color: var(--white1);
+  transition-duration: 0.1s;
+}
+.RedGlow:hover{
+  box-shadow: 0 0 30px #e40000, 0 0 40px #e40000;
+  transition-duration: 0.1s;
+}
+
+@keyframes borderPulseRed {
+  0% {
+    filter: drop-shadow(1px 0 0 #3b0000) drop-shadow(-1px 0 0 #3b0000) 
+            drop-shadow(0 1px 0 #3b0000) drop-shadow(0 -1px 0 #3b0000);
+  }
+  50% {
+    filter: drop-shadow(3px 0 0 #df0000) drop-shadow(-3px 0 0 #df0000) 
+            drop-shadow(0 3px 0 #df0000) drop-shadow(0 -3px 0 #df0000);
+  }
+  100% {
+    filter: drop-shadow(1px 0 0 #3b0000) drop-shadow(-1px 0 0 #3b0000) 
+            drop-shadow(0 1px 0 #3b0000) drop-shadow(0 -1px 0 #3b0000);
+  }
+}
+.RedGlowT:hover {
+  animation: borderPulseRed 0.8s ease-in-out infinite;
+}
+
+
+.BlueGlow:hover{
+  box-shadow: 0 0 30px #0076fd, 0 0 40px #0076fd;
+  transition-duration: 0.1s;
+}
+
+@keyframes borderPulseBlue {
+  0% {
+    filter: drop-shadow(1px 0 0 #000981) drop-shadow(-1px 0 0 #000981) 
+            drop-shadow(0 1px 0 #000981) drop-shadow(0 -1px 0 #000981);
+  }
+  50% {
+    filter: drop-shadow(3px 0 0 #001aff) drop-shadow(-3px 0 0 #001aff) 
+            drop-shadow(0 3px 0 #001aff) drop-shadow(0 -3px 0 #001aff);
+  }
+  100% {
+    filter: drop-shadow(1px 0 0 #000981) drop-shadow(-1px 0 0 #000981) 
+            drop-shadow(0 1px 0 #000981) drop-shadow(0 -1px 0 #000981);
+  }
+}
+
+.BlueGlowT:hover {
+  animation: borderPulseBlue 0.8s ease-in-out infinite;
+}
+
+/*Fuentes =========================================*/
+
+@font-face {
+  font-family: 'Audiowide';
+  src: url('/fonts/Audiowide.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.Audiowide {
+  font-family: 'Audiowide';
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url('/fonts/Orbitron.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.Orbitron {
+  font-family: 'Orbitron';
+}
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: url('/fonts/ShareTechMono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.ShareTechMono {
+  font-family: 'ShareTechMono';
+}
+@font-face {
+  font-family: "OdibeeSans";
+  src: url('/fonts/OdibeeSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.OdibeeSans {
+  font-family: 'OdibeeSans';
+}
+@font-face {
+  font-family: "Quantico-Bold";
+  src: url('/fonts/Quantico/Quantico-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoBold {
+  font-family: 'Quantico-Bold';
+}
+@font-face {
+  font-family: "Quantico-Regular";
+  src: url('/fonts/Quantico/Quantico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoRegular {
+  font-family: 'Quantico-Regular';
+}
+@font-face {
+  font-family: "Quantico.Italic";
+  src: url('/fonts/Quantico/Quantico-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoItalic {
+  font-family: 'Quantico.Italic';
+}
+@font-face {
+  font-family: "Quantico-BoldItalic";
+  src: url('/fonts/Quantico/Quantico-BoldItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoBoldI {
+  font-family: 'Quantico-BoldItalic';
+}
+
+
+
+
+/*Otros ==========================================*/
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  pointer-events: none;
+  z-index: 0;
+}
