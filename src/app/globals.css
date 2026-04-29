@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -7,9 +9,15 @@
   --negro1: #000000;
   --white1: #fcf7eb;
   --fondoT: hsla(274, 100%, 1%, 0.827);
+  --azulSTE: #004b7d;
+  --azulT: #004b7dcb;
 
 }
 
+.Theme1{
+  background-color: var(--azulSTE);
+  color: var(--white1);
+}
 
 /*Hover ==========================================*/
 .BoxShine:hover{
@@ -24,6 +32,47 @@
 
 
 /*Fuentes =========================================*/
+@font-face {
+  font-family: 'Audiowide';
+  src: url('/fonts/Audiowide.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.Audiowide {
+  font-family: 'Audiowide';
+}
 
+@font-face {
+  font-family: "Orbitron";
+  src: url('/fonts/Orbitron.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.Orbitron {
+  font-family: 'Orbitron';
+}
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: url('/fonts/ShareTechMono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.ShareTechMono {
+  font-family: 'ShareTechMono';
+}
+@font-face {
+  font-family: "OdibeeSans";
+  src: url('/fonts/OdibeeSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.OdibeeSans {
+  font-family: 'OdibeeSans';
+}
 
 /*Otros ==========================================*/
