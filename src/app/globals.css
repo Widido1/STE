@@ -2,34 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --gris1: #96938c;
-  --negro1: #000000;
+  --negro1: #000514;
   --white1: #fcf7eb;
   --fondoT: hsla(274, 100%, 1%, 0.827);
-  --azulSTE: #004b7d;
-  --azulT: #004b7dcb;
+  --azulSTE: #00538b;
+  --azulOscuro: #001420;
+  --azulClaro: #007dd1;
+  --azulT: #00538b79;
+  --azulOT: #001420e3;
 
 }
 
 .Theme1{
-  background-color: var(--azulSTE);
+  background-color: var(--azulClaro);
   color: var(--white1);
+  box-shadow: 0 0 10px var(--azulClaro), 0 0 20px var(--azulClaro);
+}
+.group:hover .Theme2 {
+  background-color: var(--azulOT);
+  color: var(--azulClaro);
+  transition: 0.5s;
+}
+.Shine{
+  text-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
 }
 
 /*Hover ==========================================*/
+.BoxShine{
+  box-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
+}
 .BoxShine:hover{
-  box-shadow: 0 0 10px var(--white1), 0 0 20px var(--white1);
-  color: var(--white1);
+  box-shadow: 0 0 30px var(--white1), 0 0 40px var(--white1);
+  background-color: var(--white1);
+  color: var(--azulOscuro);
+  transition-duration: 0.1s;
+}
+.BoxShine2:hover{
+  box-shadow: 0 0 15px var(--white1), 0 0 25px var(--white1);
+  background-color: var(--white1);
+  color: var(--azulOscuro);
   transition-duration: 0.1s;
 }
 .Bigger:hover{
   transform: scale(1.1);
   transition-duration: 0.1s;
 }
-
+/*
+.imgColor{
+  filter: grayscale(100%);
+}
+.imgColor:hover{
+  filter: grayscale(0%);
+  transition: 1s;
+}
+*/
+.imgBlue {
+  filter: grayscale(100%) brightness(0.6) sepia(100%) hue-rotate(180deg) saturate(120%);
+}
+.imgBlue:hover {
+  filter: none;
+  transition: 0.5s;
+}
 
 /*Fuentes =========================================*/
 @font-face {
@@ -76,3 +120,58 @@
 }
 
 /*Otros ==========================================*/
+
+/*Carrousel ==========================================*/
+
+/* Contenedor principal que oculta el desbordamiento */
+.infinite-track-container {
+  width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+
+/* Pista que se anima */
+.infinite-marquee-track {
+  display: flex; /* en lugar de inline-flex */
+  animation: infinite-scroll var(--speed, 20s) linear infinite;
+  width: max-content;
+}
+
+/* Dirección inversa (hacia la derecha) */
+.infinite-marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+/* Cada elemento del tren */
+.infinite-marquee-item {
+  flex-shrink: 0;
+  margin-right: 1rem;  /* Ajusta el espacio entre elementos */
+  white-space: normal; /* Permite que el texto interno pueda saltar línea si es necesario */
+}
+
+/* Pausa al hacer hover */
+/*
+.infinite-marquee-track:hover {
+  animation-play-state: paused;
+}
+*/
+
+@keyframes infinite-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* CardServicio ==========================================*/
+.text-expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.group:hover .text-expandable {
+  grid-template-rows: 1fr;
+}
+
+.text-expandable > div {
+  overflow: hidden;
+}
