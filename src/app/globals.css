@@ -37,8 +37,26 @@ html, body {
 .Shine{
   text-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
 }
+.ShineF{
+    filter: 
+    drop-shadow(0 0 3px var(--azulClaro))
+    drop-shadow(0 0 6px var(--azulClaro));
+}
 
 /*Hover ==========================================*/
+.ShineF:hover{
+    filter:
+    drop-shadow(0 0 6px var(--white1))
+    drop-shadow(0 0 10px var(--white1))
+    drop-shadow(0 0 20px var(--white1));
+    transition: 2s;
+}
+.ShineLogo:hover{
+  filter:
+  drop-shadow(0 0 2px var(--white1))
+  drop-shadow(0 0 4px var(--white1));
+  transition: 2s;
+}
 .BoxShine{
   box-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
 }
@@ -54,8 +72,18 @@ html, body {
   color: var(--azulOscuro);
   transition-duration: 0.1s;
 }
-.Bigger:hover{
+.BoxShine3:hover{
+  box-shadow: 0 0 20px var(--azulClaro), 0 0 40px var(--azulClaro);
+  background-color: var(--azulClaro);
+  color: var(--azulOscuro);
+  transition-duration: 0.1s;
+}
+.Big:hover{
   transform: scale(1.1);
+  transition-duration: 0.1s;
+}
+.Bigger:hover{
+  transform: scale(1.3);
   transition-duration: 0.1s;
 }
 /*
@@ -118,6 +146,47 @@ html, body {
 .OdibeeSans {
   font-family: 'OdibeeSans';
 }
+@font-face {
+  font-family: "Quantico-Bold";
+  src: url('/fonts/Quantico/Quantico-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoBold {
+  font-family: 'Quantico-Bold';
+}
+@font-face {
+  font-family: "Quantico-Regular";
+  src: url('/fonts/Quantico/Quantico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.Quantico {
+  font-family: 'Quantico-Regular';
+}
+@font-face {
+  font-family: "Quantico.Italic";
+  src: url('/fonts/Quantico/Quantico-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoItalic {
+  font-family: 'Quantico.Italic';
+}
+@font-face {
+  font-family: "Quantico-BoldItalic";
+  src: url('/fonts/Quantico/Quantico-BoldItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.QuanticoBoldI {
+  font-family: 'Quantico-BoldItalic';
+}
+
 
 /*Otros ==========================================*/
 
