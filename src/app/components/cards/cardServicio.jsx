@@ -26,7 +26,7 @@ export default function CardServicio(props) {
 
           {/* Texto expandible: altura 0 inicialmente, al hover crece y empuja el título hacia arriba */}
           <div className="grid overflow-hidden transition-all duration-500 max-h-0 group-hover:max-h-40">
-            <div className="grid text-md py-2 px-4">{props.text}</div>
+            <div className="grid text-sm py-2 px-4">{props.text}</div>
           </div>
         </div>
       </div>

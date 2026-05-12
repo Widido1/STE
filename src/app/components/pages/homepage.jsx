@@ -3,6 +3,7 @@ import Navbar from "../others/navbar";
 import Esphere from "../others/esphere";
 import Carrousel from "../others/carrousel";
 import CardServicio from "../cards/cardServicio";
+import WSP from "../others/wsp";
 
 export default function HomePage() {
   const itemclass = "Shine Quantico text-lg text-[--white1] text-center pl-8";
@@ -40,7 +41,9 @@ export default function HomePage() {
   return (
     <div className="grid bg-[--negro1]">
       <Navbar />
-      <Image src="/images/Camara2.jpg" alt="Frente" width={1920} height={1080}
+      <WSP />
+      <div className="grid h-[80px]"></div> {/* Espacio para el navbar */}
+      <Image src="/images/Camara1_03.png" alt="Frente" width={1920} height={1080}
         className="absolute h-screen z-10"
       />
       <div className="grid h-[95vh] bg-black/50 z-20">
@@ -78,7 +81,7 @@ export default function HomePage() {
       </div>
       <div>
         <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Estos son los servicios que ofrecemos</div>
-        <div className="grid grid-flow-col place-content-center place-items-center gap-8 py-8">
+        <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center w-[60%] gap-8 py-8">
           <CardServicio 
           img={"/images/servicios/Camaras.jpeg"}
           url={"/camaras"}
@@ -87,21 +90,33 @@ export default function HomePage() {
           />
           <CardServicio 
           img={"/images/servicios/Alarma.jpg"}
-          url={"/camaras"}
+          url={"/alarmas"}
           title={"Sistema de alarmas y deteción"}
           text={"Implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras."}
           />
           <CardServicio 
           img={"/images/servicios/Guardia.jpg"}
-          url={"/camaras"}
+          url={"/monitoreo"}
           title={"Monitoreo 24 Horas"}
           text={"Servicio de monitoreo 24 horas continuo, garantizando respuesta inmediata ante cualquier evento de seguridad en hogares, comercios y empresas en Santa Fe y la región."}
           />
           <CardServicio 
           img={"/images/servicios/Satelital.jpg"}
-          url={"/camaras"}
+          url={"/rastreo"}
           title={"Rastreo Satelital de Vehículos"}
           text={"Ofrecemos soluciones de rastreo satelital de vehículos para control, seguridad y gestión eficiente de flotas. Instalamos dispositivos GPS en cada unidad para monitorear su ubicación en tiempo real y obtener información precisa sobre su uso."}
+          />
+          <CardServicio
+          img={"/images/servicios/Vial.jpeg"}
+          url={"/vial"}
+          title={"Soluciones Viales y Analítica Avanzada"}
+          text={"Desarrollamos soluciones de videovigilancia vial y analítica inteligente orientadas a municipios, barrios privados, parques industriales y empresas que requieren control avanzado del tránsito y trazabilidad de vehículos."}
+          />
+          <CardServicio
+          img={"/images/servicios/Personas.jpg"}
+          url={"/personas"}
+          title={"Analítica de Comportamiento y Conteo de Personas"}
+          text={"En STE Seguridad Electrónica incorporamos soluciones avanzadas de analítica de video que permiten estudiar el comportamiento de las personas en tiempo real, transformando las cámaras de seguridad en herramientas estratégicas para la toma de decisiones en comercios y empresas."}
           />
         </div>
       </div>

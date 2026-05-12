@@ -42,6 +42,11 @@ html, body {
     drop-shadow(0 0 3px var(--azulClaro))
     drop-shadow(0 0 6px var(--azulClaro));
 }
+.ShineF2{
+    filter: 
+    drop-shadow(0 0 3px var(--azulClaro))
+    drop-shadow(0 0 6px var(--azulClaro));
+}
 
 /*Hover ==========================================*/
 .ShineF:hover{
@@ -50,6 +55,13 @@ html, body {
     drop-shadow(0 0 10px var(--white1))
     drop-shadow(0 0 20px var(--white1));
     transition: 2s;
+}
+.ShineF2:hover{
+    filter:
+    drop-shadow(0 0 3px var(--white1))
+    drop-shadow(0 0 5px var(--white1))
+    drop-shadow(0 0 10px var(--white1));
+    transition: 0.5s;
 }
 .ShineLogo:hover{
   filter:
