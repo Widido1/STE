@@ -5,7 +5,7 @@ export default function CardServicio(props) {
   return (
     <div>
       <Link href={props.url} className="cursor-pointer">
-      <div className="relative BoxShine3 group bg-transparent h-[500px] w-[350px] z-20">
+      <div className="relative BoxShine3 group bg-transparent h-[450px] min-[1050px]:h-[500px] w-[300px] min-[1150px]:w-[350px] z-20">
         {/* Imagen de fondo */}
         <Image
           src={props.img}

@@ -17,7 +17,7 @@ export default function SliderServicios(props) {
 
   return (
     <div className="grid justify-items-center">
-        <div className="grid grid-flow-row min-[1000px]:grid-flow-col place-self-center place-content-center place-items-center gap-4 min-[1600px]:gap-8 px-4 pb-4 w-[390px] min-[450px]:w-[450px] min-[550px]:w-[500px] min-[700px]:w-[650px] min-[1000px]:w-[900px] min-[1300px]:w-[1050px] min-[1500px]:w-[1150px]">
+        <div className="grid grid-flow-col place-self-center place-content-center place-items-center gap-4 min-[1600px]:gap-8 px-4 pb-4 w-[390px] min-[450px]:w-[450px] min-[550px]:w-[500px] min-[700px]:w-[650px] min-[1000px]:w-[900px] min-[1300px]:w-[1050px] min-[1500px]:w-[1150px]">
             <div className="grid justify-items-center">
                 <Image
                     src={grande}

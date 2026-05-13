@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="Theme1 fixed w-full Orbitron font-bold z-30 grid grid-flow-col grid-cols-3 place-content-center place-items-center p-4 text-2xl">
+        <div className="Theme1 fixed w-full Orbitron font-bold z-30 grid grid-flow-col grid-cols-3 place-content-center place-items-center p-4 text-lg min-[1050px]:text-xl min-[1200px]:text-2xl">
             <div className="grid grid-flow-col gap-4">
                 <Link href={"https://www.facebook.com/steargentina/"} className="Bigger cursor-pointer">
                     <Image src="/images/icons/Facebook.png" alt="logo" width={25} height={25}/>

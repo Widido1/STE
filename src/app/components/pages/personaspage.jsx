@@ -10,13 +10,14 @@ export default function PersonasPage() {
             <Navbar />
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico Shine text-6xl text-[--white1] py-14">Analítica de Comportamiento y Conteo de Personas</div>
-                <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center px-8 w-[1800px]">
+                <div className="grid Quantico Shine text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Analítica de Comportamiento y Conteo de Personas</div>
+                <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center 
+                px-8 w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
                     <div>
                         <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
-                        className="rounded-[10%] mx-auto w-[600px] h-[500px]"/>
+                        className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
                     </div>
-                    <div className="Quantico text-2xl text-[--white1]">
+                    <div className="Quantico text-lg min-[1450px]:text-xl min-[1450px]:text-2xl text-[--white1]">
                         En STE Seguridad Electrónica incorporamos soluciones avanzadas de analítica de video que permiten estudiar el comportamiento de las personas en tiempo real, transformando las cámaras de seguridad en herramientas estratégicas para la toma de decisiones en comercios y empresas.
                     </div>
 
@@ -62,7 +63,7 @@ export default function PersonasPage() {
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
                     <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
-                    <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center w-[60%] gap-8 py-8">
+                    <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
                     <CardServicio 
                     img={"/images/servicios/Camaras.jpeg"}
                     url={"/camaras"}

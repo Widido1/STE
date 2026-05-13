@@ -44,22 +44,22 @@ export default function HomePage() {
       <WSP />
       <div className="grid h-[80px]"></div> {/* Espacio para el navbar */}
       <Image src="/images/Camara1_03.png" alt="Frente" width={1920} height={1080}
-        className="absolute h-screen z-10"
+        className="absolute w-full h-screen z-10"
       />
       <div className="grid h-[95vh] bg-black/50 z-20">
         <div className=" z-20 w-full overflow-x-hidden bg-black/50 py-2 self-start h-min">
           <Carrousel items={items} speed={70} direction="right"/>
         </div>
-        <div className="grid grid-flow-col place-content-center place-items-center z-20 ">
+        <div className="grid grid-flow-col place-content-center place-items-center z-20 gap-8 min-[1500px]:gap-16 ">
           <div className="grid grid-flow-row place-content-center place-items-center gap-8">
-            <div className="Shine Orbitron font-bold text-center text-[--white1] text-8xl ">Servicio de Seguridad<br/> y Vigilancia</div>
-            <div className="Quantico text-[--azulClaro] text-3xl">Instalación profesional, configuración completa y soporte técnico.</div>
-            <div className="Quantico BoxShine Big text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[400px] text-4xl py-4 text-center">Contactanos</div>
+            <div className="Shine Orbitron font-bold text-center text-[--white1] text-5xl min-[1400px]:text-6xl min-[1800px]:text-7xl ">Servicio de Seguridad<br/> y Vigilancia</div>
+            <div className="Quantico text-center text-[--azulClaro] text-xl min-[1400px]:text-2xl min-[1600px]:text-3xl">Instalación profesional, configuración completa y soporte técnico.</div>
+            <div className="Quantico BoxShine Big text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center">Contactanos</div>
           </div>
-          <div className="grid grid-flow-row place-items-center place-self-end text-center Quantico
-          rounded-[5%] bg-[--azulT] text-[--white1] w-[400px] h-[600px] text-2xl mx-20">
+          <div className="grid grid-flow-row place-items-center place-self-end text-center Quantico mr-28
+          rounded-[5%] bg-[--azulT] text-[--white1] w-[300px] min-[1200px]:w-[350px] min-[1500px]:w-[400px] h-[450px] min-[1200px]:h-[500px] min-[1500px]:h-[600px] text-lg min-[1200px]:text-xl min-[1500px]:text-2xl">
             <div>Cotizá tu alarma llamando al</div>
-            <div className="Shine text-4xl font-bold text-[--white1]">+5493424220579</div>
+            <div className="Shine text-2xl min-[1200px]:text-3xl min-[1500px]:text-4xl font-bold text-[--white1]">+5493424220579</div>
             <div>Si preferis, te llamamos!<br/> Dejanos tus datos.</div>
             <input className="px-4 py-2 rounded-md" type="text" placeholder="Nombre"/>
             <input className="px-4 py-2 rounded-md" type="text" placeholder="Teléfono"/>
@@ -71,7 +71,7 @@ export default function HomePage() {
           <Carrousel items={Espheres} speed={40}/>
         </div>
       </div>
-      <div className="Quantico z-20 grid place-content-center place-items-center place-self-center text-[--white1] text-center w-[60%] h-screen text-4xl gap-8 py-16">
+      <div className="Quantico z-20 grid place-content-center place-items-center place-self-center text-[--white1] text-center h-screen text-4xl gap-8 py-16 w-[60%]">
         <Image src="/images/STEGrande.png" alt="Logo STE Seguridad Electrónica" width={1200} height={1200}
         className="absolute z-10 opacity-20 w-[1400px] h-[700px]"/>
         <div className="z-20">Somos STE Seguridad Electrónica una empresa nacida en Santa Fe en el año 2005, especializada en el diseño e implementación de soluciones integrales de seguridad. </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
       </div>
       <div>
         <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Estos son los servicios que ofrecemos</div>
-        <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center w-[60%] gap-8 py-8">
+        <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
           <CardServicio 
           img={"/images/servicios/Camaras.jpeg"}
           url={"/camaras"}

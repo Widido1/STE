@@ -17,14 +17,15 @@ export default function CamarasPage() {
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
                 <div className="grid Quantico Shine text-6xl text-[--white1] py-14">Camaras de Seguridad</div>
-                <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center px-8 w-[1800px]">
+                <div className="grid grid-flow-row min-[1250px]:grid-flow-col min-[1250px]:grid-cols-2 place-items-center place-content-center 
+                px-8 gap-8">
                     <div>
                         <Image src="/images/servicios/camaras/CamarasPrincipal.jpg" alt="no image" width={600} height={400}
                                className="rounded-[10%] mx-auto w-[600px] h-[500px]"/>
                     </div>
 
-                    <div className="Quantico grid grid-flow-row place-items-start gap-8 text-3xl text-[--white1]">
-                        <div className="grid text-4xl">Servicios incluidos:</div>
+                    <div className="Quantico grid grid-flow-row place-items-start gap-8 text-2xl min-[1450px]:text-3xl text-[--white1]">
+                        <div className="grid text-3xl min-[1450px]:text-4xl">Servicios incluidos:</div>
                         <div className="grid grid-flow-col place-items-center gap-4">
                             <div><Image src="/images/icons/icon01.png" alt="check" width={75} height={90}
                                         className="rounded-[10%] mx-auto w-[75px] h-[90px]"/></div>
@@ -67,13 +68,14 @@ export default function CamarasPage() {
                 </div>
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
-                    <div className="grid grid-flow-col grid-cols-2 place-self-center place-content-center place-items-center w-[80%]">  
-                        <div>
-                            <YouTube videoId={"rd9t8izLgW8"}/>
-                        </div>
+                    <div className="grid grid-flow-row min-[1650px]:grid-flow-col min-[1650px]:grid-cols-2 place-self-center place-content-center place-items-center w-[80%] gap-8">  
                         <div>
                             <SliderServicios ImgArr={ImgArr}/>
                         </div>
+                        <div>
+                            <YouTube videoId={"rd9t8izLgW8"}/>
+                        </div>
+
                     </div>
                     <div className="grid justify-items-center">
                         <div className="grid Quantico Shine text-6xl text-[--white1] py-14">Sub Servicios de Camaras</div>

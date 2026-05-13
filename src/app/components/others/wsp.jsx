@@ -6,7 +6,7 @@ const numberWSP = process.env.NEXT_PUBLIC_WSP;
 export default function WSP(props){
 
     return(
-        <div className="fixed top-1/2 -translate-y-1/2 right-20 min-[800px]:right-12 z-50">
+        <div className="fixed top-1/2 -translate-y-1/2 right-4 min-[1500px]:right-12 z-50">
             <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="grid cursor-pointer">
                 <Image
                     src="/images/icons/Whatsapp.svg"

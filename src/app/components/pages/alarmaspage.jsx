@@ -10,13 +10,14 @@ export default function AlarmasPage() {
             <Navbar />
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico Shine text-6xl text-[--white1] py-14">Sistema de Alarma y detección.</div>
-                <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center px-8 w-[1800px]">
+                <div className="grid Quantico Shine text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Sistema de Alarma y detección.</div>
+                <div className="grid grid-flow-row min-[1250px]:grid-flow-col min-[1250px]:grid-cols-2 place-items-center place-content-center 
+                px-8 gap-4 w-[700px] min-[1250px]:w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
                     <div>
                         <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
-                        className="rounded-[10%] mx-auto w-[600px] h-[500px]"/>
+                        className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
                     </div>
-                    <div className="Quantico text-2xl text-[--white1]">
+                    <div className="Quantico text-lg min-[1450px]:text-xl min-[1450px]:text-2xl text-[--white1]">
                         En STE Seguridad Electrónica diseñamos e implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras, combinando tecnología cableada e inalámbrica con monitoreo y respuesta eficiente.<br/>
                         También ofrecemos mantenimiento, soporte técnico y optimización de sistemas de cámaras existentes, asegurando un funcionamiento continuo y eficiente.<br/><br/>
 
@@ -68,7 +69,7 @@ export default function AlarmasPage() {
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
                     <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
-                    <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center w-[60%] gap-8 py-8">
+                    <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
                     <CardServicio 
                     img={"/images/servicios/Camaras.jpeg"}
                     url={"/camaras"}
