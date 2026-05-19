@@ -6,7 +6,7 @@ import CardServicio from "../cards/cardServicio";
 import WSP from "../others/wsp";
 
 export default function HomePage() {
-  const itemclass = "Shine Quantico text-lg text-[--white1] text-center pl-8";
+  const itemclass = "Quantico text-lg text-[--white1] text-center pl-8";
   const items = [
     <div key={1} className={itemclass}> ● Cámaras de seguridad</div>,
     <div key={2} className={itemclass} > ● Monitoreo 24 hs</div>,
@@ -50,22 +50,13 @@ export default function HomePage() {
         <div className=" z-20 w-full overflow-x-hidden bg-black/50 py-2 self-start h-min">
           <Carrousel items={items} speed={70} direction="right"/>
         </div>
-        <div className="grid grid-flow-col place-content-center place-items-center z-20 gap-8 min-[1500px]:gap-16 ">
+        <div className="grid grid-flow-col place-content-center place-items-center h-[600px] z-20 gap-8 min-[1500px]:gap-16 ">
           <div className="grid grid-flow-row place-content-center place-items-center gap-8">
-            <div className="Shine Orbitron font-bold text-center text-[--white1] text-5xl min-[1400px]:text-6xl min-[1800px]:text-7xl ">Servicio de Seguridad<br/> y Vigilancia</div>
+            <div className="Quantico font-bold text-center text-[--white1] text-5xl min-[1400px]:text-6xl min-[1800px]:text-7xl ">Servicio de Seguridad<br/> y Vigilancia</div>
             <div className="Quantico text-center text-[--azulClaro] text-xl min-[1400px]:text-2xl min-[1600px]:text-3xl">Instalación profesional, configuración completa y soporte técnico.</div>
-            <div className="Quantico BoxShine Big text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center">Contactanos</div>
+            <div className="Quantico BoxShine Big font-bold text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center">Contactanos</div>
           </div>
-          <div className="grid grid-flow-row place-items-center place-self-end text-center Quantico mr-28
-          rounded-[5%] bg-[--azulT] text-[--white1] w-[300px] min-[1200px]:w-[350px] min-[1500px]:w-[400px] h-[450px] min-[1200px]:h-[500px] min-[1500px]:h-[600px] text-lg min-[1200px]:text-xl min-[1500px]:text-2xl">
-            <div>Cotizá tu alarma llamando al</div>
-            <div className="Shine text-2xl min-[1200px]:text-3xl min-[1500px]:text-4xl font-bold text-[--white1]">+5493424220579</div>
-            <div>Si preferis, te llamamos!<br/> Dejanos tus datos.</div>
-            <input className="px-4 py-2 rounded-md" type="text" placeholder="Nombre"/>
-            <input className="px-4 py-2 rounded-md" type="text" placeholder="Teléfono"/>
-            <div className="BoxShine Big text-center bg-[--azulClaro] text-[--white1] rounded-full cursor-pointer w-[200px] py-2 ">Enviar</div>
 
-          </div>
         </div>
         <div className="z-20 w-full overflow-x-hidden self-start h-min">
           <Carrousel items={Espheres} speed={40}/>
@@ -80,7 +71,7 @@ export default function HomePage() {
 
       </div>
       <div>
-        <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Estos son los servicios que ofrecemos</div>
+        <div className="Quantico font-bold text-center text-[--white1] text-6xl py-8">Estos son los servicios que ofrecemos</div>
         <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
           <CardServicio 
           img={"/images/servicios/Camaras.jpeg"}
@@ -125,3 +116,17 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+/*
+Formulario
+  <div className="grid grid-flow-row place-items-center place-self-end text-center Quantico mr-28
+  rounded-[5%] bg-[--azulT] text-[--white1] w-[300px] min-[1200px]:w-[350px] min-[1500px]:w-[400px] h-[450px] min-[1200px]:h-[500px] min-[1500px]:h-[600px] text-lg min-[1200px]:text-xl min-[1500px]:text-2xl">
+    <div>Cotizá tu alarma llamando al</div>
+    <div className="text-2xl min-[1200px]:text-3xl min-[1500px]:text-4xl font-bold text-[--white1]">+5493424220579</div>
+    <div>Si preferis, te llamamos!<br/> Dejanos tus datos.</div>
+    <input className="px-4 py-2 rounded-md" type="text" placeholder="Nombre"/>
+    <input className="px-4 py-2 rounded-md" type="text" placeholder="Teléfono"/>
+    <div className="BoxShine Big text-center bg-[--azulClaro] text-[--white1] rounded-full cursor-pointer w-[200px] py-2 ">Enviar</div>
+  </div>
+*/

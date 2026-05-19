@@ -10,14 +10,14 @@ export default function AlarmasPage() {
             <Navbar />
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico Shine text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Sistema de Alarma y detección.</div>
+                <div className="grid Quantico font-bold text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Sistema de Alarma y detección.</div>
                 <div className="grid grid-flow-row min-[1250px]:grid-flow-col min-[1250px]:grid-cols-2 place-items-center place-content-center 
                 px-8 gap-4 w-[700px] min-[1250px]:w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
                     <div>
                         <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
                         className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
                     </div>
-                    <div className="Quantico text-lg min-[1450px]:text-xl min-[1450px]:text-2xl text-[--white1]">
+                    <div className="Quantico text-lg min-[1450px]:text-xl text-[--white1]">
                         En STE Seguridad Electrónica diseñamos e implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras, combinando tecnología cableada e inalámbrica con monitoreo y respuesta eficiente.<br/>
                         También ofrecemos mantenimiento, soporte técnico y optimización de sistemas de cámaras existentes, asegurando un funcionamiento continuo y eficiente.<br/><br/>
 
@@ -30,9 +30,10 @@ export default function AlarmasPage() {
                     </div>
 
                 </div>
-                <div className="grid place-self-center justify-items-center w-full bg-[--negro1] pt-20 px-8 pb-8">
+                <div className="Quantico BoxShine Big font-bold text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center my-12">Contacto</div>
+                <div className="grid place-self-center justify-items-center w-full bg-[--negro1] my-8 px-8 pb-8">
                     <div className="grid bg-[--negro1] w-[80%] gap-8">     
-                        <CardPlan name={"Alarmas Inalambricas para el Hogar"} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Alarmas Inalambricas para el Hogar"} img={"/images/servicios/alarmas/Alarma05.png"} 
                         text={
                             "• Sensores de movimiento, apertura y rotura de vidrio\n"+
                             "• Comunicación segura y redundante\n"+
@@ -40,7 +41,7 @@ export default function AlarmasPage() {
                             "• Integración con cámaras y domóticas\n"+
                             "• Instalación limpia sin obras\n"
                         }/>
-                        <CardPlan name={"Sistemas híbridos para empresas (cableado + inalámbrico) "} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Sistemas híbridos para empresas (cableado + inalámbrico) "} img={"/images/servicios/alarmas/Alarma02.jpg"} 
                         text={
                             "• Alta estabilidad en zonas críticas (cableado)\n"+
                             "• Expansión simple en áreas dinámicas (inalámbrico)\n"+
@@ -48,7 +49,7 @@ export default function AlarmasPage() {
                             "• Integración con CCTV, control de accesos y monitoreo 24 hs \n"+
                             "• Escalabilidad para crecimiento del negocio \n"
                         }/>
-                        <CardPlan name={"Seguridad para bancos, bóvedas y cajas de seguridad "} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Seguridad para bancos, bóvedas y cajas de seguridad "} img={"/images/servicios/alarmas/Alarma08.jpg"} 
                         text={
                             "• Sensores sísmicos y de vibración para bóvedas \n"+
                             "• Detección de intrusión perimetral y volumétrica \n"+
@@ -56,7 +57,7 @@ export default function AlarmasPage() {
                             "• Integración con CCTV, control de accesos y protocolos de emergencia \n"+
                             "• Registro y auditoría de eventos críticos \n"
                         }/>
-                        <CardPlan name={"Detección temprana de incendios"} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Detección temprana de incendios"} img={"/images/servicios/alarmas/Alarma09.jpg"} 
                         text={
                             "• Detectores de humo, temperatura y monóxido \n"+
                             "• Paneles de incendio direccionables y convencionales \n"+
@@ -68,7 +69,7 @@ export default function AlarmasPage() {
                 </div>
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
-                    <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
+                    <div className="Quantico font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
                     <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
                     <CardServicio 
                     img={"/images/servicios/Camaras.jpeg"}

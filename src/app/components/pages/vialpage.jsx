@@ -10,26 +10,27 @@ export default function VialPage() {
             <Navbar />
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico Shine text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Soluciones Viales y Analítica Avanzada</div>
+                <div className="grid Quantico font-bold text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Soluciones Viales y Analítica Avanzada</div>
                 <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center 
                 px-8 w-[1050px] min-[1250px]:w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
                     <div>
-                        <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
+                        <Image src="/images/servicios/vial/Vial01.jpg" alt="no image" width={600} height={400}
                         className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
                     </div>
-                    <div className="Quantico text-lg min-[1450px]:text-xl min-[1450px]:text-2xl text-[--white1]">
+                    <div className="Quantico text-lg  min-[1450px]:text-2xl text-[--white1]">
                         Desarrollamos soluciones de videovigilancia vial y analítica inteligente orientadas a municipios, barrios privados, parques industriales y empresas que requieren control avanzado del tránsito y trazabilidad de vehículos.
                     </div>
 
                 </div>
+                <div className="Quantico BoxShine Big font-bold text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center my-12">Contacto</div>
                 <div className="grid place-self-center justify-items-center w-full bg-[--negro1] pt-20 px-8 pb-8">
                     <div className="grid bg-[--negro1] w-[80%] gap-8">     
-                        <CardPlan name={"Cámaras viales y control de tránsito"} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Cámaras viales y control de tránsito"} img={"/images/servicios/vial/Vial06.jpg"}  
                         text={
                             "Implementación de cámaras de seguridad para entornos viales con alta performance en exteriores, capaces de operar 24/7 en condiciones exigentes (baja luz, lluvia, polvo).\n"+ 
                             "Diseñamos puntos de captura en accesos, rotondas y arterias principales para mejorar la seguridad y el control vehicular.\n"
                         }/>
-                        <CardPlan name={"Detección de patentes (ANPR/LPR) "} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Detección de patentes (ANPR/LPR) "} img={"/images/servicios/vial/Vial09.webp"}  
                         text={
                             "Instalación de sistemas ANPR (Automatic Number Plate Recognition) para lectura automática de matrículas en tiempo real. Permite listas blancas/negras, alertas por vehículo, registro histórico y exportación de datos.\n \n"+
                             "• Control de accesos vehiculares automatizados\n"+
@@ -37,7 +38,7 @@ export default function VialPage() {
                             "• Auditoría de ingresos/egresos \n"+
                             "• Alta precisión de lectura diurna y nocturna"
                         }/>
-                        <CardPlan name={"Control de velocidad "} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Control de velocidad "} img={"/images/servicios/vial/Vial08.webp"}  
                         text={
                             "Soluciones de medición y control de velocidad mediante cámaras especializadas y analítica de video.\n"+
                             "Configuración de umbrales, generación de eventos y reportes para gestión de infracciones y prevención.\n \n"+
@@ -45,7 +46,7 @@ export default function VialPage() {
                             "• Evidencia fotográfica y de video \n"+
                             "• Reportes y estadísticas por franjas horarias \n"
                         }/>
-                        <CardPlan name={"Búsqueda inteligente por atributos"} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Búsqueda inteligente por atributos"} img={"/images/servicios/vial/Vial10.webp"}  
                         text={
                             "Analítica avanzada basada en inteligencia artificial (Hikvision) que permite filtrar y buscar vehículos por características visuales. \n \n"+
                             "• Búsqueda por color, tipo de vehículo (auto, utilitario, camión, moto) \n"+
@@ -53,7 +54,7 @@ export default function VialPage() {
                             "• Recuperación rápida de eventos en grandes volúmenes de video \n"+
                             "• Optimización de investigaciones y auditorías \n"
                         }/>
-                        <CardPlan name={"Integración y plataforma de gestión "} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Integración y plataforma de gestión "} img={"/images/servicios/vial/Vial11.webp"}  
                         text={
                             "Centralizamos todos los eventos en plataformas de gestión de video (VMS) con dashboards, mapas y reportes exportables.\n \n"+
                             "• Integración con NVR/servidores y almacenamiento escalable \n"+
@@ -64,7 +65,7 @@ export default function VialPage() {
                 </div>
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
-                    <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
+                    <div className="Quantico font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
                     <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
                     <CardServicio 
                     img={"/images/servicios/Camaras.jpeg"}

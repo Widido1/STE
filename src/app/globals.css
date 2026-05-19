@@ -27,13 +27,14 @@ html, body {
 .Theme1{
   background-color: var(--azulClaro);
   color: var(--white1);
-  box-shadow: 0 0 10px var(--azulClaro), 0 0 20px var(--azulClaro);
 }
 .group:hover .Theme2 {
   background-color: var(--azulOT);
   color: var(--azulClaro);
   transition: 0.5s;
 }
+
+
 .Shine{
   text-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
 }
@@ -42,11 +43,14 @@ html, body {
     drop-shadow(0 0 3px var(--azulClaro))
     drop-shadow(0 0 6px var(--azulClaro));
 }
+/*
 .ShineF2{
     filter: 
     drop-shadow(0 0 3px var(--azulClaro))
     drop-shadow(0 0 6px var(--azulClaro));
 }
+*/
+
 
 /*Hover ==========================================*/
 .ShineF:hover{
@@ -58,9 +62,8 @@ html, body {
 }
 .ShineF2:hover{
     filter:
-    drop-shadow(0 0 3px var(--white1))
-    drop-shadow(0 0 5px var(--white1))
-    drop-shadow(0 0 10px var(--white1));
+    drop-shadow(0 0 2px var(--white1))
+    drop-shadow(0 0 4px var(--white1));
     transition: 0.5s;
 }
 .ShineLogo:hover{
@@ -69,11 +72,8 @@ html, body {
   drop-shadow(0 0 4px var(--white1));
   transition: 2s;
 }
-.BoxShine{
-  box-shadow: 0 0 5px var(--azulClaro), 0 0 10px var(--azulClaro);
-}
 .BoxShine:hover{
-  box-shadow: 0 0 30px var(--white1), 0 0 40px var(--white1);
+  box-shadow: 0 0 5px var(--white1), 0 0 10px var(--white1);
   background-color: var(--white1);
   color: var(--azulOscuro);
   transition-duration: 0.1s;

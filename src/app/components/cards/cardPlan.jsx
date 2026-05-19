@@ -4,10 +4,14 @@ export default function CardPlan(props) {
   return (
     <div className="Quantico grid grid-flow-col grid-cols-2 place-items-start rounded-md text-[--white1] gap-4"> 
         <div className="grid grid-flow-row w-full py-2">
-            <div className="grid py-2 text-2xl rounded-md text-[--white1] bg-[--azulClaro] w-full px-4">{props.name}</div>
+            <div className="grid font-bold py-2 text-2xl rounded-md text-[--white1] bg-[--azulClaro] w-full px-4">{props.name}</div>
             <div className="grid whitespace-pre-line px-4 py-2 text-xl">
                 {props.text}
             </div>
+            <div className="grid justify-center pt-2">
+                <div className="grid justify-center align-bottom font-bold BoxShine Big bg-[--azulClaro] text-[--white1] cursor-pointer rounded-full w-[200px] text-2xl px-4 py-2">Contactanos</div>
+            </div>
+            
         </div>
         <div>
             <Image src={props.img} alt="Frente" width={600} height={600}

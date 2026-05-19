@@ -10,48 +10,49 @@ export default function PersonasPage() {
             <Navbar />
             <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
             <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico Shine text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Analítica de Comportamiento y Conteo de Personas</div>
+                <div className="grid Quantico font-bold text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Analítica de Comportamiento y Conteo de Personas</div>
                 <div className="grid grid-flow-col grid-cols-2 place-items-center place-content-center 
                 px-8 w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
                     <div>
-                        <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
+                        <Image src="/images/servicios/personas/Personas01.webp" alt="no image" width={600} height={400}
                         className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
                     </div>
-                    <div className="Quantico text-lg min-[1450px]:text-xl min-[1450px]:text-2xl text-[--white1]">
+                    <div className="Quantico text-lg min-[1450px]:text-2xl text-[--white1]">
                         En STE Seguridad Electrónica incorporamos soluciones avanzadas de analítica de video que permiten estudiar el comportamiento de las personas en tiempo real, transformando las cámaras de seguridad en herramientas estratégicas para la toma de decisiones en comercios y empresas.
                     </div>
 
                 </div>
+                <div className="Quantico BoxShine Big font-bold text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center my-12">Contacto</div>
                 <div className="grid place-self-center justify-items-center w-full bg-[--negro1] pt-20 px-8 pb-8">
                     <div className="grid bg-[--negro1] w-[80%] gap-8">     
-                        <CardPlan name={"Conteo de personas y flujo de clientes "} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Conteo de personas y flujo de clientes "} img={"/images/servicios/personas/Personas03.webp"}  
                         text={
                             "Implementamos sistemas inteligentes de conteo de personas que permiten conocer con precisión la cantidad de ingresos y egresos en un local o empresa.\n"+
                             "• Medición de tráfico diario, semanal y mensual\n"+ 
                             "• Identificación de horarios pico\n"+
                             "• Optimización de recursos y personal\n"
                         }/>
-                        <CardPlan name={"Análisis de comportamiento en negocios "} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Análisis de comportamiento en negocios "} img={"/images/servicios/personas/Personas02.jpg"} 
                         text={
                             "A través de inteligencia artificial, analizamos cómo se mueven y actúan las personas dentro de un espacio.\n"+
                             "• Mapas de calor (zonas más concurridas)\n"+
                             "• Seguimiento de recorridos dentro del local\n"+
                             "• Identificación de zonas de mayor interés comercial \n"
                         }/>
-                        <CardPlan name={"Detección de aglomeraciones"} img={"/images/Camara1_02.png"}  
+                        <CardPlan name={"Detección de aglomeraciones"} img={"/images/servicios/personas/Personas04.jpg"}  
                         text={
                             "Sistemas capaces de detectar acumulación de personas en tiempo real, permitiendo actuar rápidamente ante situaciones de riesgo o mejorar la experiencia del cliente.\n"+
                             "• Alertas automáticas por alta densidad de personas \n"+
                             "• Aplicable en eventos, locales comerciales y espacios públicos \n"
                         }/>
-                        <CardPlan name={"Control de uso de elementos de protección personal (EPP)"} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Control de uso de elementos de protección personal (EPP)"} img={"/images/servicios/personas/Personas05.webp"} 
                         text={
                             "En entornos industriales y empresas, utilizamos cámaras con inteligencia artificial para verificar el cumplimiento de normas de seguridad laboral. \n"+
                             "• Detección de uso de casco, chaleco, guantes, etc. \n"+
                             "• Alertas ante incumplimientos \n"+
                             "• Mejora en la prevención de riesgos laborales \n"
                         }/>
-                        <CardPlan name={"Reportes y métricas para gestión "} img={"/images/Camara1_02.png"} 
+                        <CardPlan name={"Reportes y métricas para gestión "} img={"/images/servicios/personas/Personas06.webp"} 
                         text={
                             "Toda la información recolectada se transforma en reportes claros y exportables que permiten tomar decisiones basadas en datos. \n"+
                             "• Estadísticas por horarios, días y comportamiento \n"+
@@ -62,7 +63,7 @@ export default function PersonasPage() {
                 </div>
 
                 <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
-                    <div className="Shine Orbitron font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
+                    <div className="Quantico font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
                     <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
                     <CardServicio 
                     img={"/images/servicios/Camaras.jpeg"}

@@ -19,7 +19,7 @@ export default function CardServicio(props) {
         <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col Quantico w-full Theme2 rounded-md">
           {/* Título: siempre visible, inicialmente pegado al fondo */}
           
-            <div className="bg-[--azulClaro] text-[--white1] rounded-md text-center text-xl py-2 px-4 transition-all cursor-pointer">
+            <div className="font-bold bg-[--azulClaro] text-[--white1] rounded-md text-center text-xl py-2 px-4 transition-all cursor-pointer">
               {props.title}
             </div>
           
