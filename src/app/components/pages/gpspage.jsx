@@ -29,7 +29,7 @@ export default function GPSPage() {
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
-          <div className="flex-1 grid grid-flow-col min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
+          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
             {/* Columna izquierda: contenido principal */}
             <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
               <div className="font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">

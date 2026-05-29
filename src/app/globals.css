@@ -24,8 +24,14 @@ html, body {
   --azulOscuroT2: #000914b4;
   --azulClaro: #0060ce;
   --azulT: #00538b79;
-  --azulGradiente: linear-gradient(to right, var(--azulOscuro) 10%, transparent);
+  --azulGradiente: linear-gradient(to right, var(--azulOscuro) 10%, transparent 60%);
 
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --azulGradiente: linear-gradient(to right, var(--azulOscuro) 10%, transparent);
+  }
 }
 
 .Theme1{
