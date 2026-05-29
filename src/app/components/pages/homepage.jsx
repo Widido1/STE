@@ -16,7 +16,7 @@ export default function HomePage() {
           <source media="(max-width: 1024px)" srcSet="/images/portada_b.png" />
           {/* Imagen por defecto (escritorio) */}
           <Image
-            src="/images/portada.jpeg"
+            src="/images/portada.jpg"
             alt="Frente"
             fill
             className="object-cover"
