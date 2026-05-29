@@ -11,16 +11,21 @@ export default function HomePage() {
       {/* Usamos un contenedor relativo que ocupa el 50% de la altura inicial */}
       <div className="relative w-full h-[50vh] min-h-[450px]">
         {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
-        <Image
-          src="/images/Portada.jpeg"
-          alt="Frente"
-          fill
-          className="object-cover"
-          priority
-        />
+        <picture className="absolute inset-0 w-full h-full">
+          {/* Imagen para pantallas menores a 640px (móviles) */}
+          <source media="(max-width: 1024px)" srcSet="/images/portada_b.png" />
+          {/* Imagen por defecto (escritorio) */}
+          <Image
+            src="/images/portada.jpeg"
+            alt="Frente"
+            fill
+            className="object-cover"
+            priority
+          />
+        </picture>
         
         {/* Contenido superpuesto (Navbar + texto) */}
-        <div className="absolute inset-0 z-20 flex flex-col">
+        <div className="absolute inset-0 z-20 flex flex-col" style={{ background: 'var(--azulGradiente)' }}>
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
@@ -78,13 +83,13 @@ export default function HomePage() {
       </div>
       
       {/* ========== MITAD INFERIOR ========== */}
-      <div className="bg-[--white1] flex flex-col">
+      <div className="bg-[--white1] flex flex-1 flex-col">
         <div className="text-center font-bold text-base min-[400px]:text-lg min-[500px]:text-xl min-[800px]:text-2xl pt-4">
           SOLUCIONES PARA CADA NECESIDAD
         </div>
         
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
-        <div className="flex flex-col items-center gap-4 min-[500px]:gap-8 py-4 px-4
+        <div className="flex flex-1 flex-col items-center gap-4 min-[500px]:gap-8 py-4 px-4
                     min-[1000px]:grid min-[1000px]:grid-flow-col min-[1000px]:justify-items-center min-[1000px]:gap-4">
           
           {/* Tarjeta 1: Hogares */}

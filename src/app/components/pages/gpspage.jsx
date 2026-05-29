@@ -11,13 +11,18 @@ export default function GPSPage() {
       {/* Usamos un contenedor relativo que ocupa el 50% de la altura inicial */}
       <div className="relative w-full h-[50vh] min-h-[450px]">
         {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
-        <Image
-          src="/images/servicios/rastreo/portada_rastreo.jpg"
-          alt="Frente"
-          fill
-          className="object-cover"
-          priority
-        />
+        <picture className="absolute inset-0 w-full h-full">
+          {/* Imagen para pantallas menores a 640px (móviles) */}
+          <source media="(max-width: 1024px)" srcSet="/images/servicios/rastreo/portada_b.jpg" />
+          {/* Imagen por defecto (escritorio) */}
+          <Image
+            src="/images/servicios/rastreo/portada.jpg"
+            alt="Frente"
+            fill
+            className="object-cover"
+            priority
+          />
+        </picture>
         
         {/* Contenido superpuesto (Navbar + texto) */}
         <div className="absolute inset-0 z-20 flex flex-col" style={{ background: 'var(--azulGradiente)' }}>

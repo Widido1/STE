@@ -11,13 +11,18 @@ export default function CamarasPage() {
       {/* Usamos un contenedor relativo que ocupa el 50% de la altura inicial */}
       <div className="relative w-full h-[50vh] min-h-[450px]">
         {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
-        <Image
-          src="/images/servicios/camaras/portada_camaras.png"
-          alt="Frente"
-          fill
-          className="object-cover"
-          priority
-        />
+        <picture className="absolute inset-0 w-full h-full">
+          {/* Imagen para pantallas menores a 640px (móviles) */}
+          <source media="(max-width: 1024px)" srcSet="/images/servicios/camaras/portada_b.jpg" />
+          {/* Imagen por defecto (escritorio) */}
+          <Image
+            src="/images/servicios/camaras/portada_camaras.png"
+            alt="Frente"
+            fill
+            className="object-cover"
+            priority
+          />
+        </picture>
         
         {/* Contenido superpuesto (Navbar + texto) */}
         <div className="absolute inset-0 z-20 flex flex-col" style={{ background: 'var(--azulGradiente)' }}>
@@ -27,7 +32,7 @@ export default function CamarasPage() {
           <div className="flex-1 grid grid-flow-col min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
             {/* Columna izquierda: contenido principal */}
             <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
-              <div className="flex flex-row gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
+              <div className="flex flex-col min-[1100px]:flex-row min-[1100px]:gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
                 <div className="text-[--white1]">CÁMARAS DE </div>
                 <div className="text-[--azulClaro]"> SEGURIDAD</div>
               </div>
