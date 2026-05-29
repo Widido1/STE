@@ -84,7 +84,7 @@ export default function HomePage() {
         </div>
         
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
-        <div className="flex flex-col items-center gap-4 min-[500px]:gap-8 py-8 px-4
+        <div className="flex flex-col items-center gap-4 min-[500px]:gap-8 py-4 px-4
                     min-[1000px]:grid min-[1000px]:grid-flow-col min-[1000px]:justify-items-center min-[1000px]:gap-4">
           
           {/* Tarjeta 1: Hogares */}
