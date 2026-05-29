@@ -1,115 +1,124 @@
 import Image from "next/image";
 import Navbar from "../others/navbar";
-import CardServicio from "../cards/cardServicio";
-import CardPlan from "../cards/cardPlan";
+import Pie from "../others/pie";
 
 export default function AlarmasPage() {
-
-    return (
-        <div className="grid bg-[--negro1]">
-            <Navbar />
-            <div className="grid h-[80px] place-items-center"></div> {/* Espacio para el navbar */}
-            <div className="bg-[--negro1] grid grid-flow-row place-items-center ">
-                <div className="grid Quantico font-bold text-5xl min-[1250px]:text-6xl text-[--white1] py-14">Sistema de Alarma y detección.</div>
-                <div className="grid grid-flow-row min-[1250px]:grid-flow-col min-[1250px]:grid-cols-2 place-items-center place-content-center 
-                px-8 gap-4 w-[700px] min-[1250px]:w-[1200px] min-[1450px]:w-[1400px] min-[1650px]:w-[1600px] min-[1850px]:w-[1800px]">
-                    <div>
-                        <Image src="/images/servicios/alarmas/Alarma01.png" alt="no image" width={600} height={400}
-                        className="rounded-[10%] mx-auto w-[400px] min-[1250px]:w-[500px] min-[1450px]:w-[600px] h-[300px] min-[1250px]:h-[400px] min-[1450px]:h-[500px]"/>
-                    </div>
-                    <div className="Quantico text-lg min-[1450px]:text-xl text-[--white1]">
-                        En STE Seguridad Electrónica diseñamos e implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras, combinando tecnología cableada e inalámbrica con monitoreo y respuesta eficiente.<br/>
-                        También ofrecemos mantenimiento, soporte técnico y optimización de sistemas de cámaras existentes, asegurando un funcionamiento continuo y eficiente.<br/><br/>
-
-                        Servicios incluidos:<br/>
-                        ⦁	Diseño y asesoramiento a medida<br/>
-                        ⦁	Instalación profesional certificada<br/>
-                        ⦁	Monitoreo 24 horas<br/>
-                        ⦁	Mantenimiento preventivo y soporte técnico<br/>
-
-                    </div>
-
-                </div>
-                <div className="Quantico BoxShine Big font-bold text-[--white1] bg-[--azulClaro] rounded-full cursor-pointer w-[300px] min-[1200px]:w-[400px] text-3xl min-[1400px]:text-4xl py-4 text-center my-12">Contacto</div>
-                <div className="grid place-self-center justify-items-center w-full bg-[--negro1] my-8 px-8 pb-8">
-                    <div className="grid bg-[--negro1] w-[80%] gap-8">     
-                        <CardPlan name={"Alarmas Inalambricas para el Hogar"} img={"/images/servicios/alarmas/Alarma05.png"} 
-                        text={
-                            "• Sensores de movimiento, apertura y rotura de vidrio\n"+
-                            "• Comunicación segura y redundante\n"+
-                            "• Control desde app móvil (armado/desarmado, notificaciones)\n"+
-                            "• Integración con cámaras y domóticas\n"+
-                            "• Instalación limpia sin obras\n"
-                        }/>
-                        <CardPlan name={"Sistemas híbridos para empresas (cableado + inalámbrico) "} img={"/images/servicios/alarmas/Alarma02.jpg"} 
-                        text={
-                            "• Alta estabilidad en zonas críticas (cableado)\n"+
-                            "• Expansión simple en áreas dinámicas (inalámbrico)\n"+
-                            "• Particiones por sectores y horarios \n"+
-                            "• Integración con CCTV, control de accesos y monitoreo 24 hs \n"+
-                            "• Escalabilidad para crecimiento del negocio \n"
-                        }/>
-                        <CardPlan name={"Seguridad para bancos, bóvedas y cajas de seguridad "} img={"/images/servicios/alarmas/Alarma08.jpg"} 
-                        text={
-                            "• Sensores sísmicos y de vibración para bóvedas \n"+
-                            "• Detección de intrusión perimetral y volumétrica \n"+
-                            "• Sistemas anti-sabotaje y redundancia de comunicaciones \n"+
-                            "• Integración con CCTV, control de accesos y protocolos de emergencia \n"+
-                            "• Registro y auditoría de eventos críticos \n"
-                        }/>
-                        <CardPlan name={"Detección temprana de incendios"} img={"/images/servicios/alarmas/Alarma09.jpg"} 
-                        text={
-                            "• Detectores de humo, temperatura y monóxido \n"+
-                            "• Paneles de incendio direccionables y convencionales \n"+
-                            "• Sirenas, señalización y notificaciones remotas \n"+
-                            "• Integración con sistemas de evacuación y automatización \n"+
-                            "• Cumplimiento de normativas de seguridad \n"
-                        }/>
-                    </div>
-                </div>
-
-                <div className="grid w-full bg-[--negro1] pt-20 px-8 pb-8">
-                    <div className="Quantico font-bold text-center text-[--white1] text-6xl py-8">Otros Servicios que Ofrecemos</div>
-                    <div className="grid grid-flow-row grid-cols-3 grid-rows-2 place-self-center place-content-center place-items-center gap-8 py-8">
-                    <CardServicio 
-                    img={"/images/servicios/Camaras.jpeg"}
-                    url={"/camaras"}
-                    title={"Camaras de Seguridad"}
-                    text={"Instalación de cámaras de seguridad (CCTV) diseñadas para brindar vigilancia inteligente, control total y prevención efectiva en hogares, comercios, empresas y barrios privados."}
-                    />
-                    <CardServicio 
-                    img={"/images/servicios/Alarma.jpg"}
-                    url={"/alarmas"}
-                    title={"Sistema de alarmas y detección"}
-                    text={"Implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras."}
-                    />
-                    <CardServicio 
-                    img={"/images/servicios/Guardia.jpg"}
-                    url={"/monitoreo"}
-                    title={"Monitoreo 24 Horas"}
-                    text={"Servicio de monitoreo 24 horas continuo, garantizando respuesta inmediata ante cualquier evento de seguridad en hogares, comercios y empresas en Santa Fe y la región."}
-                    />
-                    <CardServicio 
-                    img={"/images/servicios/Satelital.jpg"}
-                    url={"/rastreo"}
-                    title={"Rastreo Satelital de Vehículos"}
-                    text={"Ofrecemos soluciones de rastreo satelital de vehículos para control, seguridad y gestión eficiente de flotas. Instalamos dispositivos GPS en cada unidad para monitorear su ubicación en tiempo real y obtener información precisa sobre su uso."}
-                    />
-                    <CardServicio
-                    img={"/images/servicios/Vial.jpeg"}
-                    url={"/vial"}
-                    title={"Soluciones Viales y Analítica Avanzada"}
-                    text={"Desarrollamos soluciones de videovigilancia vial y analítica inteligente orientadas a municipios, barrios privados, parques industriales y empresas que requieren control avanzado del tránsito y trazabilidad de vehículos."}
-                    />
-                    <CardServicio
-                    img={"/images/servicios/Personas.jpg"}
-                    url={"/personas"}
-                    title={"Analítica de Comportamiento y Conteo de Personas"}
-                    text={"En STE Seguridad Electrónica incorporamos soluciones avanzadas de analítica de video que permiten estudiar el comportamiento de las personas en tiempo real, transformando las cámaras de seguridad en herramientas estratégicas para la toma de decisiones en comercios y empresas."}
-                    />
-                    </div>
+  return (
+    // Contenedor principal: altura mínima para que crezca con el contenido
+    <div className="min-h-screen bg-[--negro1] Montserrat flex flex-col">
+      
+      {/* ========== MITAD SUPERIOR (hero) ========== */}
+      {/* Usamos un contenedor relativo que ocupa el 50% de la altura inicial */}
+      <div className="relative w-full h-[50vh] min-h-[450px]">
+        {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
+        <Image
+          src="/images/servicios/alarmas/portada_alarmas.jpg"
+          alt="Frente"
+          fill
+          className="object-cover"
+          priority
+        />
+        
+        {/* Contenido superpuesto (Navbar + texto) */}
+        <div className="absolute inset-0 z-20 flex flex-col" style={{ background: 'var(--azulGradiente)' }}>
+          <Navbar />
+          
+          {/* Grid de dos columnas para el texto y botones */}
+          <div className="flex-1 grid grid-flow-col min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
+            {/* Columna izquierda: contenido principal */}
+            <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
+              <div className="flex flex-col gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
+                <div className="text-[--white1]">ALARMAS MONITOREADAS </div>
+                <div className="text-[--azulClaro]">EN SANTA FE</div>
+              </div>
+              
+              <div className="text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
+                En STE Seguridad Electrónica diseñamos e implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras, combinando tecnología cableada e inalámbrica con monitoreo y respuesta eficiente.
+              </div>
+              
+              <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">
+                <button className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
+                  <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
+                  className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
+                  <span>SOLICITAR ASESORAMIENTO</span>
+                </button>
+                
+                <button className="flex items-center gap-2 rounded-full border-2 border-[--white1] text-[--white1] bg-[--azulOscuroT] font-semibold 
+                py-2 px-4">
+                  <Image src="/images/icons/whatsapp.png" alt="logo" width={25} height={25} 
+                  className="w-[18px] min-[1200px]:w-[25px] h-[18px] min-[1200px]:h-[25px]"/>
+                  <span>HABLAR POR WHATSAPP</span>
+                </button>
+              </div>
+              
+            </div>
+            
+            {/* Columna derecha: vacía (o podés agregar el formulario comentado) */}
+            <div></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* ========== MITAD INFERIOR ========== */}
+      <div className="bg-[--white1] flex flex-1 flex-col">      
+        {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
+        <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
+        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-5 min-[1100px]:gap-4">
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
+                <Image src="/images/icons/icon02.png" alt="logo" width={125} height={125} 
+                className="w-[75px] h-[75px]  "/>
+                <div className="flex flex-col">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">ALARMAS MONITOREADAS 24HS</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
+                      Protección para hogares, comercios y empresas con detección de intrusos en tiempo real. 
+                  </div>
                 </div>
             </div>
-        </div>
-    );
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
+                <Image src="/images/icons/icon13.png" alt="logo" width={125} height={125} 
+                className="w-[75px] h-[75px]  "/>
+                <div className="flex flex-col">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">SENSORES Y DISPOSITIVOS DE SEGURIDAD</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
+                      Equipos con sensores de movimiento, contactos magnéticos y sirenas disuasivas. 
+                  </div>
+                </div>
+
+            </div>
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
+                <Image src="/images/icons/icon04.png" alt="logo" width={125} height={125} 
+                className="w-[75px] h-[75px]  "/>
+                <div className="flex flex-col">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">MONITOREO EN TIEMPO REAL</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
+                      Conexión a central de monitoreo 24 hs con respuesta rápida ante eventos.  
+                  </div>
+                </div>
+            </div>
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
+                <Image src="/images/icons/icon12.png" alt="logo" width={125} height={125} 
+                className="w-[75px] h-[75px] "/>
+                <div className="flex flex-col">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">CONTROL DESDE EL CELULAR</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
+                      Aplicación móvil para activar, desactivar y recibir alertas instantáneas. 
+                  </div>
+                </div>
+            </div>
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
+                <Image src="/images/icons/icon16.png" alt="logo" width={125} height={125} 
+                className="w-[75px] h-[75px]  "/>
+                <div className="flex flex-col">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">INSTALACIÓN Y SERVICIO INTEGRAL</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
+                      Instalación, monitoreo y mantenimiento de alarmas en Santa Fe, con sistemas escalables e integración con cámaras de seguridad (CCTV).
+                  </div>
+                </div>
+            </div>
+          </div>
+        
+        <Pie />
+      </div>
+    </div>
+  );
 }

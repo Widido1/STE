@@ -20,9 +20,11 @@ html, body {
   --fondoT: hsla(274, 100%, 1%, 0.827);
   --azulSTE: #00538b;
   --azulOscuro: #000914;
+  --azulOscuroT: #000914e3;
+  --azulOscuroT2: #000914b4;
   --azulClaro: #0060ce;
   --azulT: #00538b79;
-  --azulOT: #001420e3;
+  --azulGradiente: linear-gradient(to right, var(--azulOscuro) 10%, transparent);
 
 }
 
