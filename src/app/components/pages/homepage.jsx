@@ -30,7 +30,7 @@ export default function HomePage() {
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
-          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
+          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] gap-4 py-4 min-[1100px]:py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
             {/* Columna izquierda: contenido principal */}
             <div className="flex flex-col gap-4 min-[1400px]:gap-6 justify-center">
               <div className="font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
@@ -109,7 +109,7 @@ export default function HomePage() {
                     min-[1000px]:grid min-[1000px]:grid-flow-col min-[1000px]:justify-items-center min-[1000px]:gap-4">
           
           {/* Tarjeta 1: Hogares */}
-          <div className="flex flex-row items-center text-center min-[1000px]:text-left min-[1000px]:items-center gap-4 max-w-[300px] min-[1000px]:max-w-none">
+          <div className="flex flex-row items-center text-center max-[500px]:w-full min-[1000px]:text-left min-[1000px]:items-center gap-4 max-w-[300px] min-[1000px]:max-w-none">
             <Image src="/images/icons/house2.png" alt="logo" width={150} height={150}
               className="w-[125px] min-[1200px]:w-[150px] h-auto" />
             <div>

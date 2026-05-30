@@ -71,59 +71,9 @@ export default function EmpresaPage() {
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
         <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
         min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-5 min-[1100px]:gap-4">
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
-                <Image src="/images/icons/icon_1.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px]  "/>
-                <div className="flex flex-col">
-                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">CÁMARAS DE SEGURIDAD INTELIGENTES</div>
-                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
-                      Sistemas de videovigilancia HD y 4K para hogares, empresas y barrios privados, con cobertura estratégica. 
-                  </div>
-                </div>
-            </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
-                <Image src="/images/icons/icon09.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px]  "/>
-                <div className="flex flex-col">
-                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">ANALÍTICA INTELIGENTE DE VIDEO (IA)</div>
-                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
-                      Detección de personas, vehículos y eventos para una seguridad proactiva y reducción de falsas alarmas. 
-                  </div>
-                </div>
-            </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
-                <Image src="/images/icons/icon18.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px]  "/>
-                <div className="flex flex-col">
-                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">LECTURA DE PATENTES (ANPR/LPR)</div>
-                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
-                      Control vehicular con identificación automática de matrículas, alertas en tiempo real e integración con accesos.  
-                  </div>
-                </div>
 
-            </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
-                <Image src="/images/icons/icon15.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px]  "/>
-                <div className="flex flex-col">
-                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">MONITOREO, GRABACIÓN Y EVINDECIA DIGITAL</div>
-                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
-                      Sistemas con DVR/NVR, almacenamiento seguro, reportes y registro de eventos para auditorías e investigaciones.  
-                  </div>
-                </div>
-            </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
-                <Image src="/images/icons/icon19.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px] "/>
-                <div className="flex flex-col">
-                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">BÚSQUEDA INTELIGENTE Y GESTIÓN AVANZADA DE VIDEO</div>
-                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
-                      Localización rápida por tipo de vehículo, color o características, optimizando el análisis de incidentes. 
-                  </div>
-                </div>
-            </div>
 
-          </div>
+        </div>
         
         <Pie />
       </div>
