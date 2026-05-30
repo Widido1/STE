@@ -2,7 +2,7 @@ import Image from "next/image";
 import Navbar from "../others/navbar";
 import Pie from "../others/pie";
 
-export default function VialPage() {
+export default function SolucionesPage() {
   return (
     // Contenedor principal: altura mínima para que crezca con el contenido
     <div className="min-h-screen bg-[--negro1] Montserrat flex flex-col">
@@ -12,10 +12,10 @@ export default function VialPage() {
       <div className="relative w-full h-[50vh] min-h-[450px]">
         <picture className="absolute inset-0 w-full h-full">
           {/* Imagen para pantallas menores a 640px (móviles) */}
-          <source media="(max-width: 1024px)" srcSet="/images/servicios/vial/portada_b.jpg" />
+          <source media="(max-width: 1024px)" srcSet="/images/servicios/soluciones/portada_b.jpg" />
           {/* Imagen por defecto (escritorio) */}
           <Image
-            src="/images/servicios/vial/portada_vial.png"
+            src="/images/servicios/soluciones/portada_soluciones.png"
             alt="Frente"
             fill
             className="object-cover"
@@ -32,15 +32,15 @@ export default function VialPage() {
             {/* Columna izquierda: contenido principal */}
             <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
               <div className="flex flex-col gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
-                <div className="text-[--white1]">SOLUCIONES VIALES Y </div>
-                <div className="text-[--azulClaro]">ANALÍTICA AVANZADA</div>
+                <div className="text-[--white1]">SOLUCIONES  </div>
+                <div className="text-[--azulClaro]">AVANZADAS</div>
               </div>
               
               <div className="text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
-                Sistema de analítica vial inteligente que permite detectar, clasificar y monitorear vehículos en tiempo real.
-                Optimiza la gestión del tránsito mediante lectura de patentes, conteo vehicular y análisis de flujo.
-                Integra cámaras de alta tecnología con software avanzado para mejorar la seguridad y prevenir incidentes.
-                Ideal para municipios, barrios privados y empresas que buscan control, eficiencia y toma de decisiones basada en datos.
+                Sistema de software de analítica de video con inteligencia artificial que transforma las cámaras en herramientas de gestión.
+                Permite obtener datos clave como conteo de personas, detección de robos y análisis de comportamiento.
+                Brinda información en tiempo real para mejorar la productividad, optimizar recursos y reducir pérdidas.
+                Ideal para empresas y comercios que buscan tomar decisiones basadas en datos y aumentar la eficiencia operativa.
               </div>
               
               <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">

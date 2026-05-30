@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../others/navbar";
 import Pie from "../others/pie";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -29,7 +30,7 @@ export default function HomePage() {
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
-          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] min-[1000px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
+          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
             {/* Columna izquierda: contenido principal */}
             <div className="flex flex-col gap-4 min-[1400px]:gap-6 justify-center">
               <div className="font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
@@ -57,22 +58,37 @@ export default function HomePage() {
                 </button>
               </div>
               
-              <div className="flex flex-wrap gap-4 text-[--white1] font-semibold text-[8px] min-[600px]:text-[10px] min-[1200px]:text-xs min-[1400px]:text-sm">
-                <div className="flex items-center gap-2">
-                  <Image src="/images/icons/escudochico.png" alt="logo" width={50} height={50}
-                    className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1"/>
-                  <span>+15 AÑOS<br/>DE EXPERIENCIA</span>
+              <div className="flex flex-col min-[1100px]:flex-row gap-4 text-[--white1] font-semibold text-[8px] min-[600px]:text-[10px] min-[1200px]:text-xs min-[1400px]:text-sm">
+                <div className="flex flex-row gap-4">
+                  <div className="flex items-center gap-2">
+                    <Image src="/images/icons/escudochico.png" alt="logo" width={50} height={50}
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1"/>
+                    <span>+20 AÑOS<br/>DE EXPERIENCIA</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src="/images/icons/tuerca2.png" alt="logo" width={50} height={50}
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-1.5 min-[600px]:p-2 min-[800px]:p-2.5" />
+                    <span>SOPORTE TÉCNICO<br/>REAL Y PRACTICO</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Image src="/images/icons/tuerca2.png" alt="logo" width={50} height={50}
-                    className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-1.5 min-[600px]:p-2 min-[800px]:p-2.5" />
-                  <span>SOPORTE TÉCNICO<br/>REAL Y PRACTICO</span>
+                <div className="flex flex-row gap-4">
+                  <div className="flex items-center gap-2">
+                    <Image src="/images/icons/tuercaA2.png" alt="logo" width={50} height={50}
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1" />
+                    <span>INSTALACIONES<br/>PROFESIONALES</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Image src="/images/icons/tuercaA2.png" alt="logo" width={50} height={50}
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1" />
+                    <span>+3500<br/>INSTALACIONES</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Image src="/images/icons/tuercaA2.png" alt="logo" width={50} height={50}
-                    className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1" />
-                  <span>INSTALACIONES<br/>PROFESIONALES</span>
-                </div>
+
+
+              </div>
+
+              <div className="flex flex-row gap-2 text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
+                <div>Representante oficial de</div><div className="font-bold">HIKIVISION</div>
               </div>
             </div>
             
@@ -97,13 +113,13 @@ export default function HomePage() {
             <Image src="/images/icons/house2.png" alt="logo" width={150} height={150}
               className="w-[125px] min-[1200px]:w-[150px] h-auto" />
             <div>
-              <div className="text-base min-[500px]:text-lg min-[1300px]:text-xl font-bold text-[--azulOscuro]">HOGARES</div>
+              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">HOGARES</div>
               <div className="font-semibold text-xs min-[500px]:text-sm">
                 Camaras Wifi <br />
                 Alarmas Inalambricas <br />
                 Monitoreo 24hs
               </div>
-              <div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2 cursor-pointer">CONSULTAR</div>
+              <Link href="/hogar" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
             </div>
           </div>
           
@@ -112,13 +128,13 @@ export default function HomePage() {
             <Image src="/images/icons/edificio2.png" alt="logo" width={150} height={150}
               className="w-[125px] min-[1200px]:w-[150px] h-auto" />
             <div>
-              <div className="text-base min-[500px]:text-lg min-[1300px]:text-xl font-bold text-[--azulOscuro]">EMPRESAS</div>
+              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">EMPRESAS</div>
               <div className="font-semibold text-xs min-[500px]:text-sm">
                 Sistemas CCTV profesionales <br />
                 Alarmas y control de accesos <br />
                 Soluciones a medida
               </div>
-              <div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2 cursor-pointer">CONSULTAR</div>
+              <Link href="/empresa" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
             </div>
           </div>
           
@@ -127,13 +143,13 @@ export default function HomePage() {
             <Image src="/images/icons/blindaje2.png" alt="logo" width={150} height={150}
               className="w-[125px] min-[1200px]:w-[150px] h-auto" />
             <div>
-              <div className="text-base min-[500px]:text-lg min-[1300px]:text-xl font-bold text-[--azulOscuro]">SOLUCIONES AVANZADAS</div>
+              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">SOLUCIONES AVANZADAS</div>
               <div className="font-semibold text-xs min-[500px]:text-sm">
                 Inteligencia artificial <br />
                 Lectura de patentes (ANPR) <br />
                 Rastreo y analitica
               </div>
-              <div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2 cursor-pointer">CONSULTAR</div>
+              <Link href="/soluciones" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
             </div>
           </div>
         </div>

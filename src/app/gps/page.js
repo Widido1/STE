@@ -2,7 +2,7 @@ import GPSPage from "../components/pages/gpspage";
 
 
 
-export default function Rastreo() {
+export default function GPS() {
   return (
     <div>
       <GPSPage/>

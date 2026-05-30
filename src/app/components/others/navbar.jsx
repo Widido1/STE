@@ -42,7 +42,9 @@ function MenuItems() {
       <Link href="/monitoreo" className="cursor-pointer">
         <div>MONITOREO</div>
       </Link>
-      <div className="cursor-pointer">NOSOTROS</div>
+      <Link href="/about" className="cursor-pointer">
+        <div>NOSOTROS</div>
+      </Link>
       <div className="cursor-pointer">CONTACTO</div>
     </div>
   );

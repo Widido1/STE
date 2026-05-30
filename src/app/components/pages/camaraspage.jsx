@@ -13,10 +13,10 @@ export default function CamarasPage() {
         {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
         <picture className="absolute inset-0 w-full h-full">
           {/* Imagen para pantallas menores a 640px (móviles) */}
-          <source media="(max-width: 1024px)" srcSet="/images/servicios/camaras/portada_b.jpg" />
+          <source media="(max-width: 1024px)" srcSet="/images/servicios/camaras/portada_b2.jpg" />
           {/* Imagen por defecto (escritorio) */}
           <Image
-            src="/images/servicios/camaras/portada_camaras.png"
+            src="/images/servicios/camaras/portada_camaras2.jpg"
             alt="Frente"
             fill
             className="object-cover"
