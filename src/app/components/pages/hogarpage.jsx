@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../others/navbar";
 import Pie from "../others/pie";
+import Link from "next/link";
 
 export default function HogarPage() {
   return (
@@ -69,10 +70,58 @@ export default function HogarPage() {
       {/* ========== MITAD INFERIOR ========== */}
       <div className="bg-[--white1] flex flex-1 flex-col">      
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
-        <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
-        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-5 min-[1100px]:gap-4">
-            
-
+        <div className="text-center font-bold text-base min-[400px]:text-lg min-[500px]:text-xl min-[800px]:text-2xl pt-4">
+          SOLUCIONES PARA CADA NECESIDAD
+        </div>
+        
+        {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
+        <div className="flex flex-1 flex-col items-center gap-4 min-[500px]:gap-8 py-4 px-4
+        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:justify-items-center min-[1100px]:gap-4">
+          
+          {/* Tarjeta 1: Hogares */}
+          <div className="flex flex-row items-start max-[1100px]:w-full text-left min-[1100px]:items-center max-w-[300px] min-[1100px]:max-w-none gap-2">
+            <Image src="/images/icons/icon_1.png" alt="logo" width={150} height={150}
+              className="w-[80px] min-[1100px]:w-[100px] h-auto" />
+            <div>
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">CAMARAS</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
+                Camaras (CCTV HD y 4K) <br />
+                Grabación continua y almacenamiento seguro <br />
+                Instalación profesional y mantenimiento
+              </div>
+              <Link href="/camaras" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
+            </div>
+          </div>
+          
+          {/* Tarjeta 2: Empresas */}
+          <div className="flex flex-row items-start max-[1100px]:w-full text-left min-[1100px]:items-center max-w-[300px] min-[1100px]:max-w-none gap-2">
+            <Image src="/images/icons/icon02.png" alt="logo" width={150} height={150}
+              className="w-[80px] min-[1100px]:w-[100px] h-auto" />
+            <div>
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">ALARMAS</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
+                Alarmas y control de accesos <br />
+                Sensores y dispositivos de seguridad <br />
+                Control desde el celular
+              </div>
+              <Link href="/alarmas" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
+            </div>
+          </div>
+          
+          {/* Tarjeta 3: Soluciones avanzadas */}
+          <div className="flex flex-row items-start max-[1100px]:w-full text-left min-[1100px]:items-center max-w-[300px] min-[1100px]:max-w-none gap-2">
+            <Image src="/images/icons/icon04.png" alt="logo" width={150} height={150}
+              className="w-[75px] h-[75px] min-[1100px]:w-[100px] min-[1100px]:h-[100px]" />
+            <div>
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">MONITOREO</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
+                Supervisión permanente 24/7/365 <br />
+                Notificación inmediata al cliente <br />
+                Coordinación con fuerzas de seguridad y emergencias
+              </div>
+              <Link href="/monitoreo" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
+            </div>
+          </div>
         </div>
         
         <Pie />

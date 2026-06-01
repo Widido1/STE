@@ -14,10 +14,10 @@ export default function HomePage() {
         {/* Imagen de fondo: ocupa todo el contenedor, se mueve con él */}
         <picture className="absolute inset-0 w-full h-full">
           {/* Imagen para pantallas menores a 640px (móviles) */}
-          <source media="(max-width: 1024px)" srcSet="/images/portada_b.png" />
+          <source media="(max-width: 1100px)" srcSet="/images/portada_b2.jpg" />
           {/* Imagen por defecto (escritorio) */}
           <Image
-            src="/images/portada.jpg"
+            src="/images/portada2.jpg"
             alt="Frente"
             fill
             className="object-cover"
@@ -43,7 +43,7 @@ export default function HomePage() {
                 Con sistema inteligente y soporte técnico real.
               </div>
               
-              <div className="flex flex-col min-[1000px]:flex-row flex-wrap gap-4 w-[250px] min-[1000px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1500px]:text-base">
+              <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1500px]:text-base">
                 <button className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
                   <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
                   className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
@@ -58,37 +58,33 @@ export default function HomePage() {
                 </button>
               </div>
               
-              <div className="flex flex-col min-[1100px]:flex-row gap-4 text-[--white1] font-semibold text-[8px] min-[600px]:text-[10px] min-[1200px]:text-xs min-[1400px]:text-sm">
+              <div className="flex flex-col min-[1200px]:flex-row gap-4 text-[--white1] font-semibold text-[8px] min-[600px]:text-[10px]">
                 <div className="flex flex-row gap-4">
                   <div className="flex items-center gap-2">
                     <Image src="/images/icons/escudochico.png" alt="logo" width={50} height={50}
-                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1"/>
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] h-[30px] min-[600px]:h-[40px] p-0.5 min-[600px]:p-1"/>
                     <span>+20 AÑOS<br/>DE EXPERIENCIA</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Image src="/images/icons/tuerca2.png" alt="logo" width={50} height={50}
-                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-1.5 min-[600px]:p-2 min-[800px]:p-2.5" />
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] h-[30px] min-[600px]:h-[40px] p-1.5 min-[600px]:p-2 min-[800px]:p-2.5" />
                     <span>SOPORTE TÉCNICO<br/>REAL Y PRACTICO</span>
                   </div>
                 </div>
                 <div className="flex flex-row gap-4">
                   <div className="flex items-center gap-2">
                     <Image src="/images/icons/tuercaA2.png" alt="logo" width={50} height={50}
-                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1" />
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] h-[30px] min-[600px]:h-[40px] p-0.5 min-[600px]:p-1" />
                     <span>INSTALACIONES<br/>PROFESIONALES</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Image src="/images/icons/tuercaA2.png" alt="logo" width={50} height={50}
-                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] min-[1200px]:w-[50px] h-[30px] min-[600px]:h-[40px] min-[1200px]:h-[50px] p-0.5 min-[600px]:p-1" />
+                      className="rounded-full border border-[--azulClaro] w-[30px] min-[600px]:w-[40px] h-[30px] min-[600px]:h-[40px] p-0.5 min-[600px]:p-1" />
                     <span>+3500<br/>INSTALACIONES</span>
                   </div>
                 </div>
 
 
-              </div>
-
-              <div className="flex flex-row gap-2 text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
-                <div>Representante oficial de</div><div className="font-bold">HIKIVISION</div>
               </div>
             </div>
             
@@ -106,50 +102,50 @@ export default function HomePage() {
         
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
         <div className="flex flex-1 flex-col items-center gap-4 min-[500px]:gap-8 py-4 px-4
-                    min-[1000px]:grid min-[1000px]:grid-flow-col min-[1000px]:justify-items-center min-[1000px]:gap-4">
+        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:justify-items-center min-[1100px]:gap-4">
           
           {/* Tarjeta 1: Hogares */}
-          <div className="flex flex-row items-center text-center max-[500px]:w-full min-[1000px]:text-left min-[1000px]:items-center gap-4 max-w-[300px] min-[1000px]:max-w-none">
+          <div className="flex flex-row items-start max-[1100px]:w-full text-left min-[1100px]:items-center  max-w-[300px] min-[1100px]:max-w-none">
             <Image src="/images/icons/house2.png" alt="logo" width={150} height={150}
-              className="w-[125px] min-[1200px]:w-[150px] h-auto" />
+              className="w-[100px] min-[1200px]:w-[125px] h-auto" />
             <div>
-              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">HOGARES</div>
-              <div className="font-semibold text-xs min-[500px]:text-sm">
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">HOGARES</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
                 Camaras Wifi <br />
                 Alarmas Inalambricas <br />
                 Monitoreo 24hs
               </div>
-              <Link href="/hogar" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
+              <Link href="/hogar" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
             </div>
           </div>
           
           {/* Tarjeta 2: Empresas */}
-          <div className="flex flex-row items-center text-center min-[1000px]:text-left min-[1000px]:items-center gap-4 max-w-[300px] min-[1000px]:max-w-none">
+          <div className="flex flex-row items-center max-[1100px]:w-full text-left min-[1100px]:items-center max-w-[300px] min-[1100px]:max-w-none">
             <Image src="/images/icons/edificio2.png" alt="logo" width={150} height={150}
-              className="w-[125px] min-[1200px]:w-[150px] h-auto" />
+              className="w-[100px] min-[1200px]:w-[125px] h-auto" />
             <div>
-              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">EMPRESAS</div>
-              <div className="font-semibold text-xs min-[500px]:text-sm">
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">EMPRESAS</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
                 Sistemas CCTV profesionales <br />
                 Alarmas y control de accesos <br />
                 Soluciones a medida
               </div>
-              <Link href="/empresa" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
+              <Link href="/empresa" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
             </div>
           </div>
           
           {/* Tarjeta 3: Soluciones avanzadas */}
-          <div className="flex flex-row items-center text-center min-[1000px]:text-left min-[1000px]:items-center gap-4 max-w-[300px] min-[1000px]:max-w-none">
+          <div className="flex flex-row items-center max-[1100px]:w-full text-left min-[1100px]:items-center max-w-[300px] min-[1100px]:max-w-none ">
             <Image src="/images/icons/blindaje2.png" alt="logo" width={150} height={150}
-              className="w-[125px] min-[1200px]:w-[150px] h-auto" />
+              className="w-[100px] min-[1200px]:w-[125px] h-auto" />
             <div>
-              <div className="text-sm min-[500px]:text-base min-[1300px]:text-lg font-bold text-[--azulOscuro]">SOLUCIONES AVANZADAS</div>
-              <div className="font-semibold text-xs min-[500px]:text-sm">
+              <div className="text-xs min-[500px]:text-sm min-[1300px]:text-base font-bold text-[--azulOscuro]">SOLUCIONES AVANZADAS</div>
+              <div className="font-semibold text-[10px] min-[500px]:text-xs">
                 Inteligencia artificial <br />
                 Lectura de patentes (ANPR) <br />
                 Rastreo y analitica
               </div>
-              <Link href="/soluciones" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-sm min-[500px]:text-base py-2">CONSULTAR</div></Link>
+              <Link href="/soluciones" className="cursor-pointer"><div className="text-[--azulClaro] font-semibold text-xs min-[500px]:text-sm py-2">CONSULTAR</div></Link>
             </div>
           </div>
         </div>
