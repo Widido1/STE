@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../others/navbar";
 import Pie from "../others/pie";
+import ImageSlider from "../sliders/imageslider";
 
 export default function AboutPage() {
   return (
@@ -66,9 +67,8 @@ export default function AboutPage() {
       {/* ========== MITAD INFERIOR ========== */}
       <div className="bg-[--white1] flex flex-1 flex-col">      
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
-        <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
-        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-5 min-[1100px]:gap-4">
-            
+        <div className="flex flex-1 flex-col itams-center justify-center">
+          <ImageSlider/>
 
         </div>
         
