@@ -54,7 +54,7 @@ export default function Pie() {
             </div>
 
             {/* Barra inferior: logo, copyright, redes sociales */}
-            <div className="flex flex-col gap-4 bg-[--azulOscuro] py-2 px-4 text-lg mt-auto
+            <div className="flex flex-col gap-4 bg-[--azulOscuro] py-2 px-4 text-lg
                             min-[800px]:flex-row min-[800px]:justify-between min-[800px]:items-center">
                 
                 {/* Logo + texto */}

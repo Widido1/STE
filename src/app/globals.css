@@ -12,11 +12,11 @@ html, body {
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --gris1: #96938c;
   --negro1: #000514;
   --white1: #ffffff;
   --white2: #f1f1f1;
   --white3: #b4b4b4;
+  --gray1: #747474;
   --fondoT: hsla(274, 100%, 1%, 0.827);
   --azulSTE: #00538b;
   --azulOscuro: #000914;

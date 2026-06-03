@@ -16,7 +16,7 @@ const imagesData = [
 
 export default function ImageSlider(props) {
   const nameClass =
-    "imgGray w-[55px] min-[1100px]:w-[120px] h-[40px] min-[1100px]:h-[120px] rounded-md cursor-pointer transition-transform hover:scale-105";
+    "imgGray w-[60px] min-[600px]:w-[90px] min-[1100px]:w-[120px] h-[60px] min-[600px]:h-[90px] min-[1100px]:h-[120px] rounded-md cursor-pointer transition-transform hover:scale-105";
   const ITEMS_TO_SHOW = 4;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [arrowLDisabled, setArrowLDisabled] = useState(true);
@@ -27,7 +27,7 @@ export default function ImageSlider(props) {
   const name = props.name;
 
   const baseArrowClass =
-    "font-bold Bigger rounded-full text-[--white3] text-3xl w-[30px] h-[30px] flex items-center justify-center transition-all";
+    "font-bold Bigger rounded-full text-[--white3] text-xl min-[600px]:text-3xl w-[20px] min-[600px]:w-[30px] h-[20px] min-[600px]:h-[30px] flex items-center justify-center transition-all";
 
   useEffect(() => {
     setArrowLDisabled(currentIndex === 0);
@@ -78,12 +78,12 @@ export default function ImageSlider(props) {
 
   return (
     <>
-      <div>
+      <div className="max-[1100px]:py-16">
         <div className="grid grid-flow-col place-content-center place-items-center w-full">
           <div className="text-center text-3xl font-extrabold">{name}</div>
         </div>
         <div className="pb-2 text-[--white3] px-2 min-[1500px]:px-4">
-          <div className="grid grid-flow-col place-self-center place-content-center place-items-center gap-4 min-[1500px]:gap-8">
+          <div className="grid grid-flow-col place-self-center place-content-center place-items-center gap-2 min-[600px]:gap-4 min-[1500px]:gap-8">
             <button
               className={`${baseArrowClass} ${arrowLDisabled ? "opacity-0 pointer-events-none" : "opacity-90 hover:opacity-100"}`}
               onClick={prevSlide}

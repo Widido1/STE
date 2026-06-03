@@ -67,7 +67,7 @@ export default function AboutPage() {
       {/* ========== MITAD INFERIOR ========== */}
       <div className="bg-[--white1] flex flex-1 flex-col">      
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
-        <div className="flex flex-1 flex-col itams-center justify-center">
+        <div className="flex flex-1 flex-col items-center justify-center h-full">
           <ImageSlider/>
 
         </div>
