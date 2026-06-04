@@ -1,20 +1,46 @@
-"use server"
-import { Resend } from "resend"
+"use server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (data) => {
-    //const email = data.email;
-    const message = data.text;
+  const { email, text, turnstileToken } = data;
 
-    await resend.emails.send({
-        from: process.env.EMAIL_FROM,
-        to: process.env.EMAIL,
-        subject: "NUEVA SOLICITUD DE CONTACTO",
-        text: message,
-        replyTo: process.env.EMAIL,
-    });
-}
+  // 1. Verificar el token con Cloudflare Turnstile
+  const formData = new FormData();
+  formData.append("secret", process.env.TURNSTILE_SECRET_KEY);
+  formData.append("response", turnstileToken);
+  // Opcional: puedes enviar la IP del usuario para mayor precisión
+  // formData.append("remoteip", ip);
+
+  const verificationUrl = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+  const verificationRes = await fetch(verificationUrl, {
+    method: "POST",
+    body: formData,
+  });
+  const verificationOutcome = await verificationRes.json();
+
+  if (!verificationOutcome.success) {
+    console.error("Error de Turnstile:", verificationOutcome);
+    throw new Error("Verificación de seguridad fallida. Intente de nuevo.");
+  }
+
+  // 2. (Opcional pero recomendado) Evitar ataques de replay:
+  //    Guarda el token en una base de datos o caché (ej. Redis) con expiración de 2 minutos
+  //    y verifica que no se haya usado antes. Si no implementas esto, alguien podría reutilizar el token.
+  //    Para empezar, puedes omitirlo, pero en producción es importante.
+
+  // 3. Enviar el correo
+  await resend.emails.send({
+    from: process.env.EMAIL_FROM,
+    to: process.env.EMAIL,
+    subject: "NUEVA SOLICITUD DE CONTACTO",
+    text: text,
+    replyTo: process.env.EMAIL,
+  });
+
+  return { success: true };
+};
 
 /*import { createTransporter } from '@/app/libs/email-config';
 

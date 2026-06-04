@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Navbar from "../others/navbar";
 import Pie from "../others/pie";
+import Link from "next/link";
+
+const numberWSP = process.env.NEXT_PUBLIC_WSP;
 
 export default function MonitoreoPage() {
   return (
@@ -42,18 +45,22 @@ export default function MonitoreoPage() {
               </div>
               
               <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">
-                <button className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
-                  <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
-                  className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
-                  <span>SOLICITAR ASESORAMIENTO</span>
-                </button>
+                <Link href="/contacto" className="cursor-pointer">
+                  <div className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
+                    <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
+                    className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
+                    <span>SOLICITAR ASESORAMIENTO</span>
+                  </div>
+                </Link>
                 
-                <button className="flex items-center gap-2 rounded-full border-2 border-[--white1] text-[--white1] bg-[--azulOscuroT] font-semibold 
-                py-2 px-4">
-                  <Image src="/images/icons/whatsapp.png" alt="logo" width={25} height={25} 
-                  className="w-[18px] min-[1200px]:w-[25px] h-[18px] min-[1200px]:h-[25px]"/>
-                  <span>HABLAR POR WHATSAPP</span>
-                </button>
+                <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="grid cursor-pointer">
+                  <div className="flex items-center gap-2 rounded-full border-2 border-[--white1] text-[--white1] bg-[--azulOscuroT] font-semibold 
+                  py-2 px-4">
+                    <Image src="/images/icons/whatsapp.png" alt="logo" width={25} height={25} 
+                    className="w-[18px] min-[1200px]:w-[25px] h-[18px] min-[1200px]:h-[25px]"/>
+                    <span>HABLAR POR WHATSAPP</span>
+                  </div>
+                </Link>
               </div>
               
             </div>
@@ -68,13 +75,13 @@ export default function MonitoreoPage() {
       <div className="bg-[--white1] flex flex-1 flex-col">      
         {/* SECCIÓN DE TARJETAS: Flex en mobile, Grid en desktop */}
         <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
-        min-[1100px]:grid min-[1100px]:grid-flow-col py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-3 min-[1100px]:gap-4">
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center min-[1100px]:items-center self-start min-[1100px]:self-start min-[1700px]:self-center gap-4 min-[1100px]:gap-2 font-semibold text-base">
+        min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-3 min-[1100px]:gap-4">
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
                 <Image src="/images/icons/icon08.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px] min-[1100px]:w-[100px] min-[1100px]:h-[100px] min-[1700px]:w-[125px] min-[1700px]:h-[125px]"/>
+                className="w-[75px] h-[75px] "/>
                 <div className="flex flex-col">
-                  <div className="text-base min-[600px]:text-lg min-[1100px]:text-xl min-[1700px]:text-2xl font-bold">CARACTERÍSTICAS DEL SERVICIO</div>
-                  <div className="text-xs min-[600px]:text-sm min-[1100px]:text-base min-[1700px]:text-lg font-semibold">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">CARACTERÍSTICAS DEL SERVICIO</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
                       ⦁ Supervisión permanente 24/7/365 <br/>
                       ⦁ Recepción de señales de alarmas en tiempo real <br/>
                       ⦁ Protocolos de actuación y verificación de eventos <br/>
@@ -83,12 +90,12 @@ export default function MonitoreoPage() {
                   </div>
                 </div>
             </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start min-[1700px]:self-center gap-4 min-[1100px]:gap-2 font-semibold text-base">
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
                 <Image src="/images/icons/icon08.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px] min-[1100px]:w-[100px] min-[1100px]:h-[100px] min-[1700px]:w-[125px] min-[1700px]:h-[125px]"/>
+                className="w-[75px] h-[75px] "/>
                 <div className="flex flex-col">
-                  <div className="text-base min-[600px]:text-lg min-[1100px]:text-xl min-[1700px]:text-2xl font-bold">TECNOLOGÍA APLICADA</div>
-                  <div className="text-xs min-[600px]:text-sm min-[1100px]:text-base min-[1700px]:text-lg font-semibold">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">TECNOLOGÍA APLICADA</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
                       ⦁ Sistemas redundantes de comunicación <br/>
                       ⦁ Software profesional de monitoreo <br/>
                       ⦁ Integración con alarmas, cámaras y control de accesos <br/>
@@ -97,12 +104,12 @@ export default function MonitoreoPage() {
                 </div>
 
             </div>
-            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start min-[1700px]:self-center gap-4 min-[1100px]:gap-2 font-semibold text-base">           
+            <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
                 <Image src="/images/icons/icon08.png" alt="logo" width={125} height={125} 
-                className="w-[75px] h-[75px] min-[1100px]:w-[100px] min-[1100px]:h-[100px] min-[1700px]:w-[125px] min-[1700px]:h-[125px]"/>
+                className="w-[75px] h-[75px] "/>
                 <div className="flex flex-col">
-                  <div className="text-base min-[600px]:text-lg min-[1100px]:text-xl min-[1700px]:text-2xl font-bold">BENEFICIOS DEL MONITOREO ACTIVO</div>
-                  <div className="text-xs min-[600px]:text-sm min-[1100px]:text-base min-[1700px]:text-lg font-semibold">
+                  <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">BENEFICIOS DEL MONITOREO ACTIVO</div>
+                  <div className="text-xs min-[1600px]:text-sm font-semibold text-left min-[1100px]:text-center">
                       ⦁ Respuesta inmediata ante incidentes <br/>
                       ⦁ Reducción de riesgos y pérdidas <br/>
                       ⦁ Mayor tranquilidad y control <br/>

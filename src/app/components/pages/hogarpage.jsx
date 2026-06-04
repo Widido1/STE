@@ -3,6 +3,8 @@ import Navbar from "../others/navbar";
 import Pie from "../others/pie";
 import Link from "next/link";
 
+const numberWSP = process.env.NEXT_PUBLIC_WSP;
+
 export default function HogarPage() {
   return (
     // Contenedor principal: altura mínima para que crezca con el contenido
@@ -45,18 +47,22 @@ export default function HogarPage() {
               </div>
               
               <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">
-                <button className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
-                  <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
-                  className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
-                  <span>SOLICITAR ASESORAMIENTO</span>
-                </button>
+                <Link href="/contacto" className="cursor-pointer">
+                  <div className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
+                    <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 
+                    className="w-[25px] min-[1200px]:w-[35px] h-[25px] min-[1200px]:h-[35px]"/>
+                    <span>SOLICITAR ASESORAMIENTO</span>
+                  </div>
+                </Link>
                 
-                <button className="flex items-center gap-2 rounded-full border-2 border-[--white1] text-[--white1] bg-[--azulOscuroT] font-semibold 
-                py-2 px-4">
-                  <Image src="/images/icons/whatsapp.png" alt="logo" width={25} height={25} 
-                  className="w-[18px] min-[1200px]:w-[25px] h-[18px] min-[1200px]:h-[25px]"/>
-                  <span>HABLAR POR WHATSAPP</span>
-                </button>
+                <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="grid cursor-pointer">
+                  <div className="flex items-center gap-2 rounded-full border-2 border-[--white1] text-[--white1] bg-[--azulOscuroT] font-semibold 
+                  py-2 px-4">
+                    <Image src="/images/icons/whatsapp.png" alt="logo" width={25} height={25} 
+                    className="w-[18px] min-[1200px]:w-[25px] h-[18px] min-[1200px]:h-[25px]"/>
+                    <span>HABLAR POR WHATSAPP</span>
+                  </div>
+                </Link>
               </div>
               
             </div>

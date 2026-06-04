@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import MiniSlider from "../sliders/minislider";
 
+const numberWSP = process.env.NEXT_PUBLIC_WSP;
+
 export default function Pie() {
     return (
         <div className="flex flex-col w-full h-full Montserrat">
@@ -21,9 +23,11 @@ export default function Pie() {
                             Central Propia los 365 dias del año
                             con respuesta inmediata ante eventos.
                         </div>
-                        <div className="text-[--azulClaro] font-semibold text-base py-2 cursor-pointer">
-                            CONSULTAR
-                        </div>
+                        <Link href="/monitoreo" className="cursor-pointer">
+                            <div className="text-[--azulClaro] font-semibold text-base py-2 cursor-pointer">
+                                CONSULTAR
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
@@ -44,12 +48,14 @@ export default function Pie() {
                     <div className="text-xs min-[1200px]:text-sm font-semibold text-center min-[1100px]:text-left">
                         Escribinos por Whatsapp y te asesoramos sin compromiso.
                     </div>
-                    <div className="flex flex-row items-center rounded-full text-[--azulOscuro] border-2 border-[--azulOscuro] font-semibold 
-                                    w-[200px] min-[1200px]:w-[230px] text-xs min-[1200px]:text-sm min-[1400px]:text-base px-4 py-1.5 min-[1400px]:py-2 gap-2 cursor-pointer">
-                        <Image src="/images/icons/whatsapp2.png" alt="logo" width={25} height={25}
-                               className="w-[25px] h-[25px]" />
-                        <div className="font-semibold">ESCRIBIR AHORA</div>
-                    </div>
+                    <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="grid cursor-pointer">
+                        <div className="flex flex-row items-center rounded-full text-[--azulOscuro] border-2 border-[--azulOscuro] font-semibold 
+                        w-[200px] min-[1200px]:w-[230px] text-xs min-[1200px]:text-sm min-[1400px]:text-base px-4 py-1.5 min-[1400px]:py-2 gap-2 cursor-pointer">
+                            <Image src="/images/icons/whatsapp2.png" alt="logo" width={25} height={25}
+                                className="w-[25px] h-[25px]" />
+                            <div className="font-semibold">ESCRIBIR AHORA</div>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
