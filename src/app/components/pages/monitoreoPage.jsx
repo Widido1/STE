@@ -77,7 +77,7 @@ export default function MonitoreoPage() {
         <div className="flex flex-1 flex-col min-[1100px]:flex-row justify-self-center mx-auto min-[1100px]:items-center min-[1100px]:justify-items-center gap-6 px-4
         min-[1100px]:grid min-[1100px]:grid-flow-col min-[1100px]:place-content-center py-8 min-[1100px]:py-3 min-[1100px]:grid-cols-3 min-[1100px]:gap-4">
             <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">
-                <Image src="/images/icons/icon08.png" alt="logo" width={125} height={125} 
+                <Image src="/images/icons/icon04.png" alt="logo" width={125} height={125} 
                 className="w-[75px] h-[75px] "/>
                 <div className="flex flex-col">
                   <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">CARACTERÍSTICAS DEL SERVICIO</div>
