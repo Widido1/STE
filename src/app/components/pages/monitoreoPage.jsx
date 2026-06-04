@@ -105,7 +105,7 @@ export default function MonitoreoPage() {
 
             </div>
             <div className="flex flex-row min-[1100px]:flex-col justify-start min-[1100px]:justify-center items-center self-start min-[1100px]:self-start gap-2 min-[1100px]:gap-4 font-semibold text-base">           
-                <Image src="/images/icons/icon08.png" alt="logo" width={125} height={125} 
+                <Image src="/images/icons/icon09.png" alt="logo" width={125} height={125} 
                 className="w-[75px] h-[75px] "/>
                 <div className="flex flex-col">
                   <div className="text-[13px] min-[1600px]:text-base font-bold text-left min-[1100px]:text-center">BENEFICIOS DEL MONITOREO ACTIVO</div>
