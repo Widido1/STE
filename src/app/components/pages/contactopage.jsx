@@ -88,40 +88,40 @@ export default function ContactoPage() {
       <Navbar />
       <div className="flex flex-1 flex-col w-full">
         <div className="flex flex-1 flex-col h-full w-full bg-[--white1] px-4">
-          <div className="flex flex-col self-center justify-center rounded-md bg-[--azulOscuro] text-[--white1] my-4 py-4 px-16">
+          <div className="flex flex-col self-center max-[500px]:items-center justify-center rounded-md bg-[--azulOscuro] text-[--white1] my-4 py-4 px-6 min-[500px]:px-16">
             {/* Campo NOMBRE */}
             <div className="flex flex-col py-2">
-              <div className="text-xl font-semibold px-2 py-2">NOMBRE</div>
+              <div className="text-base min-[500px]:text-xl font-semibold px-2 py-2">NOMBRE</div>
               <input
-                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[300px]"
+                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[230px] min-[500px]:w-[300px]"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
               />
             </div>
             {/* Campo TELEFONO */}
             <div className="flex flex-col py-2">
-              <div className="text-xl font-semibold px-2 py-2">TELEFONO</div>
+              <div className="text-base min-[500px]:text-xl font-semibold px-2 py-2">TELEFONO</div>
               <input
-                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[300px]"
+                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[230px] min-[500px]:w-[300px]"
                 value={telefono}
                 onChange={(e) => setTelefono(e.target.value)}
               />
             </div>
             {/* Campo CIUDAD */}
             <div className="flex flex-col py-2">
-              <div className="text-xl font-semibold px-2 py-2">CIUDAD</div>
+              <div className="text-base min-[500px]:text-xl font-semibold px-2 py-2">CIUDAD</div>
               <input
-                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[300px]"
+                className="rounded-md bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[230px] min-[500px]:w-[300px]"
                 value={ciudad}
                 onChange={(e) => setCiudad(e.target.value)}
               />
             </div>
             {/* Tipo de servicio con radio buttons (selección única) */}
             <div className="flex flex-col py-2 gap-2">
-              <div className="text-xl font-semibold px-2">TIPO DE SERVICIO</div>
+              <div className="text-base min-[500px]:text-xl font-semibold px-2">TIPO DE SERVICIO</div>
               <div className="grid grid-flow-col grid-cols-3 gap-1">
                 <div className="flex flex-col text-center items-center gap-2">
-                  <div className="text-base font-semibold">Hogar</div>
+                  <div className="text-xs min-[500px]:text-base font-semibold">Hogar</div>
                   <input
                     type="radio"
                     name="servicio"
@@ -132,7 +132,7 @@ export default function ContactoPage() {
                   />
                 </div>
                 <div className="flex flex-col text-center items-center gap-2">
-                  <div className="text-base font-semibold">Comercio</div>
+                  <div className="text-xs min-[500px]:text-base font-semibold">Comercio</div>
                   <input
                     type="radio"
                     name="servicio"
@@ -143,7 +143,7 @@ export default function ContactoPage() {
                   />
                 </div>
                 <div className="flex flex-col text-center items-center gap-2">
-                  <div className="text-base font-semibold">Empresa</div>
+                  <div className="text-xs min-[500px]:text-base font-semibold">Empresa</div>
                   <input
                     type="radio"
                     name="servicio"
@@ -157,9 +157,9 @@ export default function ContactoPage() {
             </div>
             {/* Campo ASUNTO */}
             <div className="flex flex-col py-2">
-              <div className="text-xl font-semibold px-2 py-2">ASUNTO</div>
+              <div className="text-base min-[500px]:text-xl font-semibold px-2 py-2">ASUNTO</div>
               <textarea
-                className="rounded-md text-sm bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[300px] h-[100px]"
+                className="rounded-md text-sm bg-[--white2] text-[--azulOscuro] px-4 py-2 w-[230px] min-[500px]:w-[300px] h-[100px]"
                 value={asunto}
                 onChange={(e) => setAsunto(e.target.value)}
               />
@@ -183,7 +183,7 @@ export default function ContactoPage() {
               <button
                 className={`text-xl font-semibold px-4 py-2 rounded-md transition-colors ${
                   !enviando && token
-                    ? "bg-[--gray1] text-[--white3] hover:opacity-90 cursor-pointer"
+                    ? "bg-[--azulClaro] text-[--white1] hover:opacity-90 cursor-pointer"
                     : "bg-gray-400 text-gray-200 cursor-not-allowed"
                 }`}
                 onClick={handleSolicitud}
