@@ -13,7 +13,14 @@ export default function MiniSlider(props) {
     <Image src="/images/Espheres/diag.jpg" alt="logo" width={80} height={60} key={5} className={nameClass} />,
     <Image src="/images/Espheres/travel.jpg" alt="logo" width={80} height={60} key={6} className={nameClass} />,
     <Image src="/images/Espheres/upcn.webp" alt="logo" width={80} height={60} key={7} className={nameClass} />,
-    <Image src="/images/Espheres/union.jpg" alt="logo" width={80} height={60} key={8} className={nameClass} />
+    <Image src="/images/Espheres/union.jpg" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/aire.png" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/remax.jpg" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/ypf.webp" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/epe.webp" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/macro.webp" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/mit.jpeg" alt="logo" width={80} height={60} key={8} className={nameClass} />,
+    <Image src="/images/Espheres/aguared.jpg" alt="logo" width={80} height={60} key={8} className={nameClass} />
   ];
   const cArray = items;
   const [mI, setMI] = useState(0);

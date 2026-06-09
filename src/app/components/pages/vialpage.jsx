@@ -33,13 +33,13 @@ export default function VialPage() {
           {/* Grid de dos columnas para el texto y botones */}
           <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
             {/* Columna izquierda: contenido principal */}
-            <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
-              <div className="flex flex-col gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
+            <div className="flex flex-col gap-4 justify-center">
+              <div className="flex flex-col gap-2 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
                 <div className="text-[--white1]">SOLUCIONES VIALES Y </div>
                 <div className="text-[--azulClaro]">ANALÍTICA AVANZADA</div>
               </div>
               
-              <div className="text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
+              <div className="text-[10px] min-[400px]:text-xs min-[900px]:text-sm text-[--white1]">
                 Sistema de analítica vial inteligente que permite detectar, clasificar y monitorear vehículos en tiempo real.
                 Optimiza la gestión del tránsito mediante lectura de patentes, conteo vehicular y análisis de flujo.
                 Integra cámaras de alta tecnología con software avanzado para mejorar la seguridad y prevenir incidentes.
