@@ -23,7 +23,7 @@ export default function HomePage() {
             alt="Frente"
             fill
             className="object-cover"
-            priority
+            priority={true}
           />
         </picture>
         
