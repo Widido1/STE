@@ -48,17 +48,17 @@ export default function Pie() {
                     <div className="text-xs min-[1200px]:text-sm font-semibold text-center min-[1100px]:text-left">
                         Escribinos por Whatsapp y te asesoramos sin compromiso.
                     </div>
-                    <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="grid grid-flow-row max-[1100px]:gap-2 max-[1100px]:justify-center min-[1100px]:grid-flow-col cursor-pointer w-full">
-                        <div className="flex flex-row items-center rounded-full text-[--azulOscuro] border-2 border-[--azulOscuro] font-semibold 
+                    <div className="grid grid-flow-row max-[1100px]:gap-2 max-[1100px]:justify-center min-[1100px]:grid-flow-col cursor-pointer w-full">
+                        <Link href={`https://wa.me/${numberWSP}`} target="_blank" className="flex flex-row items-center rounded-full text-[--azulOscuro] border-2 border-[--azulOscuro] font-semibold 
                         w-[200px] min-[1200px]:w-[230px] text-xs min-[1200px]:text-sm min-[1400px]:text-base px-4 py-1.5 min-[1400px]:py-2 gap-2 cursor-pointer">
                             <Image src="/images/icons/whatsapp2.png" alt="logo" width={25} height={25}
                                 className="w-[25px] h-[25px]" />
                             <div className="font-semibold">ESCRIBIR AHORA</div>
-                        </div>
+                        </Link>
                         <Link className="grid place-items-center place-content-center align-middle cursor-pointer" href={`https://wa.me/${numberWSP}`}>
                             <div className="grid place-self-end text-right text-[10px] min-[1100px]:text-xs text-[--white3]">Dar de baja</div>
                         </Link>
-                    </Link>
+                    </div>
                 </div>
             </div>
 
