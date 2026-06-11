@@ -70,11 +70,6 @@ export const metadata = {
   },
   
   // Iconos del sitio (favicon, etc.)
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/favicon-16x16.png",
-  },
   
 };
 
