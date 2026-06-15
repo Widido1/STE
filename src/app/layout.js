@@ -4,6 +4,9 @@ import "./globals.css";
 // 🔽 NUEVO: Importamos el componente GoogleAnalytics desde @next/third-parties/google
 import { GoogleAnalytics } from '@next/third-parties/google'
 
+// 🔽🆕 NUEVO: Importamos el componente Analytics de Vercel para medir rendimiento y visitas
+import { Analytics } from '@vercel/analytics/react'
+
 // 1. METADATOS BASE (Next.js 15+ / App Router)
 export const metadata = {
   // Configuración del sitio
@@ -116,6 +119,10 @@ export default function RootLayout({ children }) {
         {/* 🔽 NUEVO: Google Analytics 4 - ID de medición proporcionado por el cliente */}
         {/* Este componente carga el script gtag.js y registra las páginas vistas automáticamente */}
         <GoogleAnalytics gaId="G-B1PFN4DC2R" />
+        
+        {/* 🔽🆕 NUEVO: Vercel Analytics - Mide Core Web Vitals y visitas técnicas */}
+        {/* mode="auto" captura tanto páginas vistas como rendimiento sin configuraciones adicionales */}
+        <Analytics mode="auto" />
         
       </body>
     </html>
