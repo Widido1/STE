@@ -1,36 +1,29 @@
 import "./globals.css";
 
 // Importación necesaria para Google Analytics (usando el paquete oficial de Next.js)
-// 🔽 NUEVO: Importamos el componente GoogleAnalytics desde @next/third-parties/google
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 // 🔽🆕 NUEVO: Importamos el componente Analytics de Vercel para medir rendimiento y visitas
 import { Analytics } from '@vercel/analytics/react'
 
+// 🔽 Importamos Script de Next.js para manejar scripts de terceros
+import Script from 'next/script'
+
 // 1. METADATOS BASE (Next.js 15+ / App Router)
 export const metadata = {
-  // Configuración del sitio
   metadataBase: new URL("https://www.steargentina.com.ar/"), // 🔁 CAMBIA POR TU DOMINIO REAL
   title: {
     default: "STE - Seguridad Electrónica en Santa Fe | Cámaras y Alarmas",
     template: "STE | Tu Empresa de Seguridad Electronica"
   },
   description: "Instalación de cámaras de seguridad, alarmas y monitoreo 24/7 en Santa Fe, Rosario y toda la provincia. ¡Protegemos tu negocio y hogar!",
-  
-  // Palabras clave (ya no pesan para Google, pero útiles para otros buscadores)
   keywords: "cámaras de seguridad Santa Fe, empresa de seguridad electrónica, monitoreo de alarmas, instalación de CCTV",
-  
-  // Autores y verificaciones
   authors: [{ name: "STE", url: "https://www.steargentina.com.ar/" }],
   creator: "STE",
   publisher: "STE",
-  
-  // Verificación para Google Search Console
   verification: {
     google: "TU_CODIGO_DE_VERIFICACION", // 🔁 REEMPLAZA
   },
-  
-  // Robots (indexar todo, seguir enlaces)
   robots: {
     index: true,
     follow: true,
@@ -42,13 +35,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  
-  // Canonical base (se genera automáticamente)
   alternates: {
     canonical: '/',
   },
-  
-  // Open Graph (para Facebook, LinkedIn, etc.)
   openGraph: {
     title: "Seguridad Electrónica en Santa Fe | Cámaras y Alarmas",
     description: "Empresa líder en instalación de cámaras de seguridad, alarmas y monitoreo 24/7 en Santa Fe y Rosario. Presupuesto sin cargo.",
@@ -65,8 +54,6 @@ export const metadata = {
     locale: "es_AR",
     type: "website",
   },
-  
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     title: "STE - Seguridad Electrónica | Cámaras y Alarmas",
@@ -76,13 +63,13 @@ export const metadata = {
   },
 };
 
-// 2. COMPONENTE PRINCIPAL (con idioma argentino y datos estructurados)
+// 2. COMPONENTE PRINCIPAL
 export default function RootLayout({ children }) {
   return (
     <html lang="es-AR">
       <body>
         {children}
-        
+
         {/* 3. DATOS ESTRUCTURADOS (JSON-LD para LocalBusiness) */}
         <script
           type="application/ld+json"
@@ -115,16 +102,59 @@ export default function RootLayout({ children }) {
             })
           }}
         />
-        
-        {/* 🔽 NUEVO: Google Analytics 4 - ID de medición proporcionado por el cliente */}
-        {/* Este componente carga el script gtag.js y registra las páginas vistas automáticamente */}
+
+        {/* 🔽 Google Analytics 4 (carga automática de gtag.js) */}
         <GoogleAnalytics gaId="G-B1PFN4DC2R" />
-        
-        {/* 🔽🆕 NUEVO: Vercel Analytics - Mide Core Web Vitals y visitas técnicas */}
-        {/* mode="auto" captura tanto páginas vistas como rendimiento sin configuraciones adicionales */}
+
+        {/* 🔽 Google Tag Manager (corregido con Script de Next.js) */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-5KPMH58');
+            `
+          }}
+        />
+
+        {/* 🔽 (Opcional) Noscript para GTM – se coloca dentro del body */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KPMH58"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            `
+          }}
+        />
+
+        {/* 🔽 Vercel Analytics (mide Core Web Vitals y visitas) */}
         <Analytics mode="auto" />
-        
       </body>
     </html>
   );
 }
+
+
+/*
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5KPMH58');</script>
+
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KPMH58"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+*/
