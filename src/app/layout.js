@@ -1,17 +1,13 @@
 import "./globals.css";
 
-// Importación necesaria para Google Analytics (usando el paquete oficial de Next.js)
-import { GoogleAnalytics } from '@next/third-parties/google'
-
 // 🔽🆕 NUEVO: Importamos el componente Analytics de Vercel para medir rendimiento y visitas
 import { Analytics } from '@vercel/analytics/react'
 
 // 🔽 Importamos Script de Next.js para manejar scripts de terceros
 import Script from 'next/script'
 
-// 1. METADATOS BASE (Next.js 15+ / App Router)
 export const metadata = {
-  metadataBase: new URL("https://www.steargentina.com.ar/"), // 🔁 CAMBIA POR TU DOMINIO REAL
+  metadataBase: new URL("https://www.steargentina.com.ar/"),
   title: {
     default: "STE - Seguridad Electrónica en Santa Fe | Cámaras y Alarmas",
     template: "STE | Tu Empresa de Seguridad Electronica"
@@ -22,7 +18,7 @@ export const metadata = {
   creator: "STE",
   publisher: "STE",
   verification: {
-    google: "TU_CODIGO_DE_VERIFICACION", // 🔁 REEMPLAZA
+    google: "TU_CODIGO_DE_VERIFICACION",
   },
   robots: {
     index: true,
@@ -63,14 +59,13 @@ export const metadata = {
   },
 };
 
-// 2. COMPONENTE PRINCIPAL
 export default function RootLayout({ children }) {
   return (
     <html lang="es-AR">
       <body>
         {children}
 
-        {/* 3. DATOS ESTRUCTURADOS (JSON-LD para LocalBusiness) */}
+        {/* DATOS ESTRUCTURADOS (JSON-LD) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -103,10 +98,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔽 Google Analytics 4 (carga automática de gtag.js) */}
-        <GoogleAnalytics gaId="G-B1PFN4DC2R" />
-
-        {/* 🔽 Google Tag Manager (corregido con Script de Next.js) */}
+        {/* 🔽 Google Tag Manager (ÚNICA fuente para Google Analytics) */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -126,7 +118,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔽 (Opcional) Noscript para GTM – se coloca dentro del body */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
@@ -136,7 +127,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔽 Vercel Analytics (mide Core Web Vitals y visitas) */}
+        {/* 🔽 Vercel Analytics (independiente, mide rendimiento y visitas técnicas) */}
         <Analytics mode="auto" />
       </body>
     </html>
