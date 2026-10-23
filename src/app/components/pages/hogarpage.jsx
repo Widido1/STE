@@ -31,22 +31,22 @@ export default function HogarPage() {
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
-          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-4 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
+          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] min-[1100px]:grid-cols-2 gap-3 py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1700px]:px-16">
             {/* Columna izquierda: contenido principal */}
-            <div className="flex flex-col gap-4 min-[1700px]:gap-6 justify-center">
-              <div className="flex flex-col gap-4 font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
+            <div className="flex flex-col gap-3 min-[1700px]:gap-6 justify-center">
+              <div className="flex flex-col gap-2 font-bold text-lg min-[500px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
                 <div className="text-[--white1]">SERVICIOS PARA  </div>
                 <div className="text-[--azulClaro]">EL HOGAR</div>
               </div>
               
-              <div className="text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
+              <div className="text-[10px] min-[500px]:text-xs text-[--white1]">
                 Sistema integral de alarmas y cámaras de seguridad con monitoreo 24 hs, diseñado para proteger tu hogar en todo momento.
                 Permite visualizar en tiempo real desde el celular y recibir alertas inmediatas ante cualquier evento.
                 Integra tecnología avanzada para detección de intrusos, control y supervisión continua.
                 Brinda tranquilidad, prevención y respuesta rápida, cuidando lo más importante las 24 horas.
               </div>
               
-              <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">
+              <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-3 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1700px]:text-base">
                 <Link href="/contacto" className="cursor-pointer">
                   <div className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
                     <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 

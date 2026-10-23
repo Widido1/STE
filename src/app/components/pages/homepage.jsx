@@ -32,9 +32,9 @@ export default function HomePage() {
           <Navbar />
           
           {/* Grid de dos columnas para el texto y botones */}
-          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] gap-4 py-4 min-[1100px]:py-4 px-4 min-[1100px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
+          <div className="flex-1 grid grid-flow-col grid-cols-[5fr_1fr] min-[800px]:grid-cols-[2fr_1fr] gap-4 py-4 min-[1000px]:py-4 px-4 min-[1000px]:px-6 min-[1200px]:px-8 min-[1500px]:px-16">
             {/* Columna izquierda: contenido principal */}
-            <div className="flex flex-col gap-4 min-[1400px]:gap-6 justify-center">
+            <div className="flex flex-col gap-2 min-[500px]:gap-3 min-[1400px]:gap-6 justify-center">
               <div className="font-bold text-lg min-[400px]:text-xl min-[600px]:text-2xl min-[800px]:text-3xl min-[1200px]:text-4xl min-[1600px]:text-5xl">
                 <div className="text-[--white1]">SEGURIDAD ELECTRONICA</div>
                 <div className="text-[--azulClaro]">PROFESIONAL</div>
@@ -45,7 +45,7 @@ export default function HomePage() {
                 Con sistema inteligente y soporte técnico real.
               </div>
               
-              <div className="flex flex-col min-[1100px]:flex-row flex-wrap gap-4 w-[250px] min-[1100px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1500px]:text-base">
+              <div className="flex flex-col min-[1000px]:flex-row flex-wrap gap-2 min-[500px]:gap-4 w-[250px] min-[1000px]:w-full max-w-[600px] min-[1200px]:max-w-[650px] text-xs min-[1200px]:text-sm min-[1500px]:text-base">
                 <Link href="/contacto" className="cursor-pointer">
                   <div className="flex items-center gap-2 rounded-md bg-[--azulClaro] text-[--white1] font-semibold py-2 px-4">
                     <Image src="/images/icons/planilla2.png" alt="logo" width={35} height={35} 

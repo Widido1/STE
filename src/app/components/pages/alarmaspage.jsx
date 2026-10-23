@@ -40,7 +40,7 @@ export default function AlarmasPage() {
                 <div className="text-[--azulClaro]">EN SANTA FE</div>
               </div>
               
-              <div className="text-[10px] min-[400px]:text-xs min-[600px]:text-sm min-[800px]:text-base min-[1200px]:text-lg text-[--white1]">
+              <div className="text-[10px] min-[400px]:text-xs min-[900px]:text-sm text-[--white1]">
                 En STE Seguridad Electrónica diseñamos e implementamos sistemas de alarmas profesionales orientados a la protección integral de hogares, comercios, empresas y entidades financieras, combinando tecnología cableada e inalámbrica con monitoreo y respuesta eficiente.
               </div>
               
